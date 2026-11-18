@@ -18,3 +18,4 @@ export const locationRepo = {
 };
 
 export default locationRepo;
+

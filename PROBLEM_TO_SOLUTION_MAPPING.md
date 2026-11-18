@@ -60,3 +60,4 @@ While Phase 1 through 5 deliver an end-to-end operational platform, the architec
    - Integrate a lightweight vision model to automatically categorize photo uploads (e.g. classifying water stain severity or broken glass) and auto-tag required spare parts.
 5. **Database Server Migration:**
    - Seamless transition from ACID JSON file-store to PostgreSQL or CockroachDB using the abstraction provided by the repository pattern.
+

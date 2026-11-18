@@ -735,5 +735,104 @@
     "type": "preventive_dispatch",
     "link": "/staff/tasks/rec_1795020824277_d267y",
     "isRead": false
+  },
+  {
+    "id": "rec_1795021851491_y0sdc",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.491Z",
+    "userId": "usr_staff_plumb",
+    "title": "Auto-Assigned: CCM-2026-0050",
+    "message": "New maintenance ticket auto-assigned: \"Monsoon seepage near window sill in Lab 402\" at Aryabhata Tech Tower, Embedded IoT Research Lab 402. Priority: Urgent.",
+    "type": "task_assigned",
+    "link": "/staff/tasks/rec_1795021851487_1w41s",
+    "isRead": false
+  },
+  {
+    "id": "rec_1795021851494_2zbnk",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.494Z",
+    "userId": "usr_admin_01",
+    "title": "New Ticket: CCM-2026-0050",
+    "message": "Aarav Patel submitted: \"Monsoon seepage near window sill in Lab 402\" (Plumbing - Urgent).",
+    "type": "new_complaint",
+    "link": "/admin/complaints/rec_1795021851487_1w41s",
+    "isRead": false
+  },
+  {
+    "id": "rec_1795021851512_wsffz",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.512Z",
+    "userId": "usr_staff_plumb",
+    "title": "Auto-Assigned: CCM-2026-0051",
+    "message": "New maintenance ticket auto-assigned: \"Lab 402 window gasket rain leak duplicate\" at Aryabhata Tech Tower, Embedded IoT Research Lab 402. Priority: Urgent.",
+    "type": "task_assigned",
+    "link": "/staff/tasks/rec_1795021851506_kgoql",
+    "isRead": false
+  },
+  {
+    "id": "rec_1795021851514_prd2z",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.514Z",
+    "userId": "usr_admin_01",
+    "title": "New Ticket: CCM-2026-0051",
+    "message": "Aarav Patel submitted: \"Lab 402 window gasket rain leak duplicate\" (Plumbing - Urgent).",
+    "type": "new_complaint",
+    "link": "/admin/complaints/rec_1795021851506_kgoql",
+    "isRead": false
+  },
+  {
+    "id": "rec_1795021851525_9rq61",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.525Z",
+    "userId": "usr_stud_01",
+    "title": "Ticket Merged: CCM-2026-0051",
+    "message": "Your complaint was merged into active ticket #CCM-2026-0050. You will receive status updates as it is resolved.",
+    "type": "complaint_merged",
+    "link": "/student/complaints/rec_1795021851487_1w41s",
+    "isRead": false
+  },
+  {
+    "id": "rec_1795021851535_1szkv",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.535Z",
+    "userId": "usr_stud_01",
+    "title": "Status Update: CCM-2026-0050",
+    "message": "Your complaint \"Monsoon seepage near window sill in Lab 402\" has been updated to \"In Progress\".",
+    "type": "status_in progress",
+    "link": "/student/complaints/rec_1795021851487_1w41s",
+    "isRead": false
+  },
+  {
+    "id": "rec_1795021851543_t9bkh",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.544Z",
+    "userId": "usr_stud_01",
+    "title": "Issue Resolved: CCM-2026-0050",
+    "message": "Work order completed: \"Monsoon seepage near window sill in Lab 402\". Please verify and share your feedback.",
+    "type": "status_resolved",
+    "link": "/student/complaints/rec_1795021851487_1w41s",
+    "isRead": false
+  },
+  {
+    "id": "rec_1795021851547_re3ho",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.547Z",
+    "userId": "usr_stud_01",
+    "title": "Merged Ticket Resolved: CCM-2026-0051",
+    "message": "Master ticket #CCM-2026-0050 has been resolved. Your issue has been resolved.",
+    "type": "status_resolved",
+    "link": "/student/complaints/rec_1795021851506_kgoql",
+    "isRead": false
+  },
+  {
+    "id": "rec_1795021851559_petwd",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.559Z",
+    "userId": "usr_staff_plumb",
+    "title": "🔧 New Preventive Order: CCM-2026-0052",
+    "message": "Recurring task \"Monthly Overhead Water Tank Sanitization & Chlorination\" has been dispatched to your queue. Due in 72h.",
+    "type": "preventive_dispatch",
+    "link": "/staff/tasks/rec_1795021851557_ve9yj",
+    "isRead": false
   }
 ]

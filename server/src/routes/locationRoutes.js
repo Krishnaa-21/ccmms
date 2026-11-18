@@ -18,3 +18,4 @@ router.get('/:id', getLocationById);
 router.post('/', requireAuth, requireAdmin, createLocation);
 
 export default router;
+

@@ -154,5 +154,17 @@
     "landmark": "Near North Elevators",
     "zone": "Advanced Computing Wing",
     "qrPayload": "https://ccmms.apex.edu/report?building=Aryabhata%20Tech%20Tower&floor=4th%20Floor&room=Embedded%20IoT%20Research%20Lab%20402"
+  },
+  {
+    "id": "rec_1795021851473_ebaha",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.473Z",
+    "code": "LOC-APEXCAMPUSMAIN-ARY-EMBE",
+    "building": "Aryabhata Tech Tower",
+    "floor": "4th Floor",
+    "room": "Embedded IoT Research Lab 402",
+    "landmark": "Near North Elevators",
+    "zone": "Advanced Computing Wing",
+    "qrPayload": "https://ccmms.apex.edu/report?building=Aryabhata%20Tech%20Tower&floor=4th%20Floor&room=Embedded%20IoT%20Research%20Lab%20402"
   }
 ]

@@ -29,3 +29,4 @@ export default function EscalationBadge({ level, escalatedAt, showDetails = true
     </span>
   );
 }
+

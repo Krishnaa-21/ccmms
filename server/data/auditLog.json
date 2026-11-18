@@ -460,5 +460,103 @@
       "role": "staff"
     },
     "details": "Allocated 1 spare parts (Value: ₹560) to work order #CCM-2026-0047"
+  },
+  {
+    "id": "rec_1795021851493_c0lmc",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.493Z",
+    "action": "COMPLAINT_CREATED",
+    "entityType": "Complaint",
+    "entityId": "rec_1795021851487_1w41s",
+    "actor": {
+      "id": "usr_stud_01",
+      "name": "Aarav Patel",
+      "role": "student"
+    },
+    "details": "Created ticket CCM-2026-0050 (Urgent) in Plumbing"
+  },
+  {
+    "id": "rec_1795021851513_lk307",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.514Z",
+    "action": "COMPLAINT_CREATED",
+    "entityType": "Complaint",
+    "entityId": "rec_1795021851506_kgoql",
+    "actor": {
+      "id": "usr_stud_01",
+      "name": "Aarav Patel",
+      "role": "student"
+    },
+    "details": "Created ticket CCM-2026-0051 (Urgent) in Plumbing"
+  },
+  {
+    "id": "rec_1795021851528_9uqtc",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.528Z",
+    "action": "COMPLAINT_MERGED",
+    "entityType": "Complaint",
+    "entityId": "rec_1795021851487_1w41s",
+    "actor": {
+      "id": "usr_admin_01",
+      "name": "Dr. Ramesh Sundaram",
+      "role": "admin"
+    },
+    "details": "Merged 1 duplicate tickets [rec_1795021851506_kgoql] into parent ticket #CCM-2026-0050. Combined community upvotes: 0."
+  },
+  {
+    "id": "rec_1795021851535_k2wgw",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.535Z",
+    "action": "COMPLAINT_STATUS_IN_PROGRESS",
+    "entityType": "Complaint",
+    "entityId": "rec_1795021851487_1w41s",
+    "actor": {
+      "id": "usr_admin_01",
+      "name": "Dr. Ramesh Sundaram",
+      "role": "admin"
+    },
+    "details": "Status changed from Assigned to In Progress by Dr. Ramesh Sundaram (admin)"
+  },
+  {
+    "id": "rec_1795021851543_2krx3",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.543Z",
+    "action": "COMPLAINT_STATUS_RESOLVED",
+    "entityType": "Complaint",
+    "entityId": "rec_1795021851487_1w41s",
+    "actor": {
+      "id": "usr_admin_01",
+      "name": "Dr. Ramesh Sundaram",
+      "role": "admin"
+    },
+    "details": "Status changed from In Progress to Resolved by Dr. Ramesh Sundaram (admin)"
+  },
+  {
+    "id": "rec_1795021851560_y1fmi",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.560Z",
+    "action": "PREVENTIVE_PLAN_EXECUTED",
+    "entityType": "PreventivePlan",
+    "entityId": "prv_001",
+    "actor": {
+      "id": "usr_admin_01",
+      "name": "Dr. Ramesh Sundaram",
+      "role": "admin"
+    },
+    "details": "Dispatched work order #CCM-2026-0052 for plan \"Monthly Overhead Water Tank Sanitization & Chlorination\". Next scheduled run: 12/18/2026."
+  },
+  {
+    "id": "rec_1795021851578_p3wmz",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.578Z",
+    "action": "INVENTORY_PARTS_CONSUMED",
+    "entityType": "Complaint",
+    "entityId": "rec_1795021851487_1w41s",
+    "actor": {
+      "id": "usr_staff_plumb",
+      "name": "Rajesh Sharma",
+      "role": "staff"
+    },
+    "details": "Allocated 1 spare parts (Value: ₹560) to work order #CCM-2026-0050"
   }
 ]

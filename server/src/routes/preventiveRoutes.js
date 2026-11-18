@@ -21,3 +21,4 @@ router.delete('/:id', requireAdmin, deletePreventivePlan);
 router.post('/:id/run-now', requireAdmin, runPreventivePlanNow);
 
 export default router;
+

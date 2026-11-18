@@ -2708,5 +2708,169 @@
     "upvotedBy": [],
     "isDeleted": false,
     "attachments": []
+  },
+  {
+    "id": "rec_1795021851487_1w41s",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.485Z",
+    "trackingNumber": "CMP-2026-050",
+    "referenceNumber": "CCM-2026-0050",
+    "title": "Monsoon seepage near window sill in Lab 402",
+    "description": "Rainwater leaking through window gasket onto workbench.",
+    "categoryId": "cat_plumbing",
+    "categoryName": "Plumbing",
+    "categoryColor": "#0284c7",
+    "categoryIcon": "Droplets",
+    "subCategory": "Leakage",
+    "priority": "Urgent",
+    "status": "Resolved",
+    "location": {
+      "building": "Aryabhata Tech Tower",
+      "floor": "4th Floor",
+      "room": "Embedded IoT Research Lab 402",
+      "landmark": ""
+    },
+    "contactPreference": "Phone",
+    "createdBy": {
+      "id": "usr_stud_01",
+      "name": "Aarav Patel",
+      "email": "aarav.cse@apex.edu",
+      "role": "student",
+      "department": "Computer Science (B.Tech 3rd Yr)"
+    },
+    "assignedTo": {
+      "id": "usr_staff_plumb",
+      "name": "Rajesh Sharma",
+      "email": "plumbing@apex.edu",
+      "role": "staff",
+      "department": "Plumbing & Water Works",
+      "specialty": "Plumbing"
+    },
+    "updatedAt": "2026-11-18T17:10:51.576Z",
+    "dueDate": "2026-11-18T21:10:51.485Z",
+    "isOverdue": false,
+    "escalationLevel": 0,
+    "escalatedAt": null,
+    "upvotesCount": 0,
+    "upvotedBy": [],
+    "isDeleted": false,
+    "slaHours": 4,
+    "estimatedCost": 560,
+    "resolutionNotes": "Industrial silicone weather-seal applied around aluminum window sash.",
+    "rejectionReason": null,
+    "attachments": [],
+    "mergedTicketIds": [
+      "rec_1795021851506_kgoql"
+    ],
+    "resolvedAt": "2026-11-18T17:10:51.540Z",
+    "partsUsed": [
+      {
+        "itemId": "inv_001",
+        "name": "15W T8 LED Batten Light (4ft)",
+        "sku": "ELEC-LED-15W",
+        "quantity": 2,
+        "unitCost": 280,
+        "totalCost": 560
+      }
+    ]
+  },
+  {
+    "id": "rec_1795021851506_kgoql",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.505Z",
+    "trackingNumber": "CMP-2026-051",
+    "referenceNumber": "CCM-2026-0051",
+    "title": "Lab 402 window gasket rain leak duplicate",
+    "description": "Second report of water dripping onto electronics.",
+    "categoryId": "cat_plumbing",
+    "categoryName": "Plumbing",
+    "categoryColor": "#0284c7",
+    "categoryIcon": "Droplets",
+    "subCategory": "Leakage",
+    "priority": "Urgent",
+    "status": "Resolved",
+    "location": {
+      "building": "Aryabhata Tech Tower",
+      "floor": "4th Floor",
+      "room": "Embedded IoT Research Lab 402",
+      "landmark": ""
+    },
+    "contactPreference": "Phone",
+    "createdBy": {
+      "id": "usr_stud_01",
+      "name": "Aarav Patel",
+      "email": "aarav.cse@apex.edu",
+      "role": "student",
+      "department": "Computer Science (B.Tech 3rd Yr)"
+    },
+    "assignedTo": {
+      "id": "usr_staff_plumb",
+      "name": "Rajesh Sharma",
+      "email": "plumbing@apex.edu",
+      "role": "staff",
+      "department": "Plumbing & Water Works",
+      "specialty": "Plumbing"
+    },
+    "updatedAt": "2026-11-18T17:10:51.545Z",
+    "dueDate": "2026-11-18T21:10:51.505Z",
+    "isOverdue": false,
+    "escalationLevel": 0,
+    "escalatedAt": null,
+    "upvotesCount": 0,
+    "upvotedBy": [],
+    "isDeleted": false,
+    "slaHours": 4,
+    "estimatedCost": 0,
+    "resolutionNotes": "Resolved via parent ticket #CCM-2026-0050: Industrial silicone weather-seal applied around aluminum window sash.",
+    "rejectionReason": null,
+    "attachments": [],
+    "mergedIntoId": "rec_1795021851487_1w41s",
+    "mergedIntoRef": "CCM-2026-0050",
+    "resolvedAt": "2026-11-18T17:10:51.540Z"
+  },
+  {
+    "id": "rec_1795021851557_ve9yj",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.556Z",
+    "trackingNumber": "CMP-2026-052",
+    "referenceNumber": "CCM-2026-0052",
+    "title": "[Preventive] Monthly Overhead Water Tank Sanitization & Chlorination",
+    "description": "Drain sediment, pressure wash internal walls with food-grade chlorination agent, inspect ball float valves, and test residual chlorine parts per million (PPM) at discharge.",
+    "categoryId": "cat_plumbing",
+    "categoryName": "Plumbing",
+    "categoryColor": "#0284c7",
+    "categoryIcon": "Wrench",
+    "subCategory": "Water Supply",
+    "priority": "High",
+    "status": "Assigned",
+    "type": "Preventive",
+    "preventivePlanId": "prv_001",
+    "location": {
+      "building": "Hostel Block B",
+      "floor": "Rooftop",
+      "room": "Overhead Tank 3",
+      "landmark": "Staircase 2 Terrace Riser"
+    },
+    "createdBy": {
+      "id": "usr_admin_01",
+      "name": "Dr. Ramesh Sundaram",
+      "role": "admin",
+      "department": "Facilities Maintenance Operations"
+    },
+    "assignedTo": {
+      "id": "usr_staff_plumb",
+      "name": "Rajesh Sharma",
+      "email": "plumbing@apex.edu",
+      "department": "Plumbing & Water Works",
+      "role": "staff"
+    },
+    "updatedAt": "2026-11-18T17:10:51.556Z",
+    "dueDate": "2026-11-21T17:10:51.556Z",
+    "isOverdue": false,
+    "escalationLevel": 0,
+    "upvotesCount": 0,
+    "upvotedBy": [],
+    "isDeleted": false,
+    "attachments": []
   }
 ]

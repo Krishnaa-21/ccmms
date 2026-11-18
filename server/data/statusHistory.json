@@ -2486,5 +2486,141 @@
     },
     "notes": "Auto-synchronized from parent ticket #CCM-2026-0047",
     "changedAt": "2026-11-18T16:53:44.262Z"
+  },
+  {
+    "id": "rec_1795021851489_durq7",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.489Z",
+    "complaintId": "rec_1795021851487_1w41s",
+    "trackingNumber": "CMP-2026-050",
+    "referenceNumber": "CCM-2026-0050",
+    "fromStatus": null,
+    "status": "Submitted",
+    "changedBy": {
+      "id": "usr_stud_01",
+      "name": "Aarav Patel",
+      "role": "student"
+    },
+    "notes": "Complaint submitted by requester via Campus Portal",
+    "changedAt": "2026-11-18T17:10:51.485Z"
+  },
+  {
+    "id": "rec_1795021851490_xwj24",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.490Z",
+    "complaintId": "rec_1795021851487_1w41s",
+    "trackingNumber": "CMP-2026-050",
+    "referenceNumber": "CCM-2026-0050",
+    "fromStatus": "Submitted",
+    "status": "Assigned",
+    "changedBy": {
+      "id": "system_auto_assign",
+      "name": "Smart Workflow Engine",
+      "role": "system"
+    },
+    "notes": "Smart Auto-Assignment assigned to Rajesh Sharma (Plumbing) based on lowest weighted workload",
+    "changedAt": "2026-11-18T17:10:51.590Z"
+  },
+  {
+    "id": "rec_1795021851509_li012",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.509Z",
+    "complaintId": "rec_1795021851506_kgoql",
+    "trackingNumber": "CMP-2026-051",
+    "referenceNumber": "CCM-2026-0051",
+    "fromStatus": null,
+    "status": "Submitted",
+    "changedBy": {
+      "id": "usr_stud_01",
+      "name": "Aarav Patel",
+      "role": "student"
+    },
+    "notes": "Complaint submitted by requester via Campus Portal",
+    "changedAt": "2026-11-18T17:10:51.505Z"
+  },
+  {
+    "id": "rec_1795021851510_5eqyn",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.510Z",
+    "complaintId": "rec_1795021851506_kgoql",
+    "trackingNumber": "CMP-2026-051",
+    "referenceNumber": "CCM-2026-0051",
+    "fromStatus": "Submitted",
+    "status": "Assigned",
+    "changedBy": {
+      "id": "system_auto_assign",
+      "name": "Smart Workflow Engine",
+      "role": "system"
+    },
+    "notes": "Smart Auto-Assignment assigned to Rajesh Sharma (Plumbing) based on lowest weighted workload",
+    "changedAt": "2026-11-18T17:10:51.610Z"
+  },
+  {
+    "id": "rec_1795021851524_nsb1f",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.524Z",
+    "complaintId": "rec_1795021851506_kgoql",
+    "trackingNumber": "CMP-2026-051",
+    "referenceNumber": "CCM-2026-0051",
+    "fromStatus": "Assigned",
+    "status": "Merged",
+    "changedBy": {
+      "id": "usr_admin_01",
+      "name": "Dr. Ramesh Sundaram",
+      "role": "admin"
+    },
+    "notes": "Merged into parent ticket #CCM-2026-0050. Reason: Identical rain leakage reported in IoT Lab 402",
+    "changedAt": "2026-11-18T17:10:51.522Z"
+  },
+  {
+    "id": "rec_1795021851533_4z101",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.533Z",
+    "complaintId": "rec_1795021851487_1w41s",
+    "trackingNumber": "CMP-2026-050",
+    "referenceNumber": "CCM-2026-0050",
+    "fromStatus": "Assigned",
+    "status": "In Progress",
+    "changedBy": {
+      "id": "usr_admin_01",
+      "name": "Dr. Ramesh Sundaram",
+      "role": "admin"
+    },
+    "notes": "Technician sealing window frame",
+    "changedAt": "2026-11-18T17:10:51.531Z"
+  },
+  {
+    "id": "rec_1795021851542_91cwp",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.542Z",
+    "complaintId": "rec_1795021851487_1w41s",
+    "trackingNumber": "CMP-2026-050",
+    "referenceNumber": "CCM-2026-0050",
+    "fromStatus": "In Progress",
+    "status": "Resolved",
+    "changedBy": {
+      "id": "usr_admin_01",
+      "name": "Dr. Ramesh Sundaram",
+      "role": "admin"
+    },
+    "notes": "Industrial silicone weather-seal applied around aluminum window sash.",
+    "changedAt": "2026-11-18T17:10:51.540Z"
+  },
+  {
+    "id": "rec_1795021851545_v5liv",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:10:51.545Z",
+    "complaintId": "rec_1795021851506_kgoql",
+    "trackingNumber": "rec_1795021851506_kgoql",
+    "referenceNumber": "rec_1795021851506_kgoql",
+    "fromStatus": "Merged",
+    "status": "Resolved",
+    "changedBy": {
+      "id": "usr_admin_01",
+      "name": "Dr. Ramesh Sundaram",
+      "role": "admin"
+    },
+    "notes": "Auto-synchronized from parent ticket #CCM-2026-0050",
+    "changedAt": "2026-11-18T17:10:51.540Z"
   }
 ]

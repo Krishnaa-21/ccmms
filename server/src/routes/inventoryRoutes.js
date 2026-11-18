@@ -10,3 +10,4 @@ router.get('/', getInventory);
 router.post('/record-usage', requireStaff, recordPartsUsed);
 
 export default router;
+

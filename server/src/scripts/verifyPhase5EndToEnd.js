@@ -260,3 +260,4 @@ verifyPhase5().catch((err) => {
   console.error('\n❌ Phase 5 Verification Error:', err.response?.data || err.message);
   process.exit(1);
 });
+

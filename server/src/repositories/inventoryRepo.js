@@ -17,3 +17,4 @@ export const inventoryRepo = {
 };
 
 export default inventoryRepo;
+
