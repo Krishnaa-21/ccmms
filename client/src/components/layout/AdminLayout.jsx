@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Sidebar from './Sidebar.jsx';
 import Topbar from './Topbar.jsx';
 import MobileBottomNav from './MobileBottomNav.jsx';
+import ErrorBoundary from '../common/ErrorBoundary.jsx';
 
 export function AdminLayout() {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -26,7 +27,9 @@ export function AdminLayout() {
         {/* Page View with Extended Width for Admin Grids & Tables */}
         <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 pb-24 md:pb-8">
           <div className="max-w-7xl mx-auto space-y-6">
-            <Outlet />
+            <ErrorBoundary>
+              <Outlet />
+            </ErrorBoundary>
           </div>
         </main>
       </div>

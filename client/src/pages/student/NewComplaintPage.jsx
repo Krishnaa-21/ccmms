@@ -89,11 +89,12 @@ export default function NewComplaintPage() {
     if (catParam && categories.length > 0) {
       const match = categories.find((c) => c.id === catParam || c.name.toLowerCase() === catParam.toLowerCase());
       if (match) {
+        const subcats = match.subCategories || match.subcategories || [];
         setFormData((prev) => ({
           ...prev,
           categoryId: match.id,
           categoryName: match.name,
-          subcategory: match.subcategories?.[0] || ''
+          subcategory: subcats[0] || ''
         }));
       }
     }
@@ -186,11 +187,12 @@ export default function NewComplaintPage() {
 
   // Handle Category Select
   const handleSelectCategory = (cat) => {
+    const subcats = cat.subCategories || cat.subcategories || [];
     setFormData((prev) => ({
       ...prev,
       categoryId: cat.id,
       categoryName: cat.name,
-      subcategory: cat.subcategories?.[0] || ''
+      subcategory: subcats[0] || ''
     }));
   };
 
@@ -435,20 +437,20 @@ export default function NewComplaintPage() {
                           <Icon className="w-6 h-6" />
                         </div>
                         <span className="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
-                          SLA: {cat.slaHours || 24}h target
+                          SLA: {typeof cat.slaHours === 'object' ? (cat.slaHours?.Medium || cat.slaHours?.Standard || 24) : (cat.slaHours || 24)}h target
                         </span>
                       </div>
                       <h3 className="text-base font-bold text-slate-900 dark:text-white">{cat.name}</h3>
                       <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">{cat.description}</p>
                     </div>
 
-                    {isSelected && cat.subcategories?.length > 0 && (
+                    {isSelected && (cat.subCategories || cat.subcategories)?.length > 0 && (
                       <div className="mt-4 pt-4 border-t border-primary-200 dark:border-primary-900/60" onClick={(e) => e.stopPropagation()}>
                         <label className="block text-[11px] font-bold uppercase tracking-wider text-primary-900 dark:text-primary-300 mb-2">
                           Specific Component:
                         </label>
                         <div className="flex flex-wrap gap-1.5">
-                          {cat.subcategories.map((sub) => (
+                          {(cat.subCategories || cat.subcategories || []).map((sub) => (
                             <button
                               key={sub}
                               type="button"
@@ -925,7 +927,7 @@ export default function NewComplaintPage() {
             <div className="pt-2 flex items-center justify-center gap-2">
               <PriorityBadge priority={submittedData.priority} />
               <span className="text-xs text-slate-500">
-                Target SLA: {submittedData.slaHours || 24} hours
+                Target SLA: {typeof submittedData.slaHours === 'object' ? (submittedData.slaHours?.Medium || 24) : (submittedData.slaHours || 24)} hours
               </span>
             </div>
           </div>

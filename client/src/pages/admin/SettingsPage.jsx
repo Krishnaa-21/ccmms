@@ -306,7 +306,7 @@ export default function SettingsPage() {
                       {cat.name}
                     </span>
                     <span className="text-[10px] font-semibold px-2 py-0.5 rounded-full bg-primary-100 text-primary-800 dark:bg-primary-950 dark:text-primary-300">
-                      SLA: {cat.slaHours || 24}h
+                      SLA: {typeof cat.slaHours === 'object' ? (cat.slaHours?.Medium || 24) : (cat.slaHours || 24)}h
                     </span>
                   </div>
                   <button

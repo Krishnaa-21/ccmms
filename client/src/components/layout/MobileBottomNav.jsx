@@ -53,7 +53,7 @@ export default function MobileBottomNav() {
 
         {/* Center Action (New Complaint) */}
         <NavLink
-          to="/student/complaints/new"
+          to="/student/new-complaint"
           className="flex flex-col items-center justify-center -mt-5"
         >
           <div className="w-12 h-12 rounded-full bg-blue-700 text-white flex items-center justify-center shadow-lg shadow-blue-700/30 border-4 border-white dark:border-slate-900 active:scale-95 transition-transform">

@@ -8,6 +8,7 @@ import { AuthProvider, useAuth } from './context/AuthContext.jsx';
 import { NotificationProvider } from './context/NotificationContext.jsx';
 
 import { ProtectedRoute, RoleRoute } from './components/common/ProtectedRoute.jsx';
+import ErrorBoundary from './components/common/ErrorBoundary.jsx';
 import StudentLayout from './components/layout/StudentLayout.jsx';
 import AdminLayout from './components/layout/AdminLayout.jsx';
 import StaffLayout from './components/layout/StaffLayout.jsx';
@@ -120,53 +121,55 @@ export default function App() {
         <AuthProvider>
           <NotificationProvider>
             <BrowserRouter>
-              {/* Phase 5 Global Command Palette & PWA Install Banner */}
-              <CommandPalette />
-              <PWAInstallBanner />
+              <ErrorBoundary>
+                {/* Phase 5 Global Command Palette & PWA Install Banner */}
+                <CommandPalette />
+                <PWAInstallBanner />
 
-              <Routes>
-                {/* 1. Public Website & Transparency Board */}
-                <Route path="/" element={<LandingPage />} />
-                <Route path="/issues" element={<PublicIssuesPage />} />
-                <Route path="/public-board" element={<PublicIssuesPage />} />
-                <Route path="/report" element={<ReportDeepLink />} />
+                <Routes>
+                  {/* 1. Public Website & Transparency Board */}
+                  <Route path="/" element={<LandingPage />} />
+                  <Route path="/issues" element={<PublicIssuesPage />} />
+                  <Route path="/public-board" element={<PublicIssuesPage />} />
+                  <Route path="/report" element={<ReportDeepLink />} />
 
-                <Route
-                  path="/login"
-                  element={
-                    <PublicRoute>
-                      <LoginPage />
-                    </PublicRoute>
-                  }
-                />
-                <Route
-                  path="/register"
-                  element={
-                    <PublicRoute>
-                      <RegisterPage />
-                    </PublicRoute>
-                  }
-                />
-                <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+                  <Route
+                    path="/login"
+                    element={
+                      <PublicRoute>
+                        <LoginPage />
+                      </PublicRoute>
+                    }
+                  />
+                  <Route
+                    path="/register"
+                    element={
+                      <PublicRoute>
+                        <RegisterPage />
+                      </PublicRoute>
+                    }
+                  />
+                  <Route path="/forgot-password" element={<ForgotPasswordPage />} />
 
-                {/* 2. Student / Requester Portal */}
-                <Route
-                  path="/student"
-                  element={
-                    <ProtectedRoute>
-                      <StudentLayout />
-                    </ProtectedRoute>
-                  }
-                >
-                  <Route index element={<Navigate to="/student/dashboard" replace />} />
-                  <Route path="dashboard" element={<StudentDashboard />} />
-                  <Route path="new-complaint" element={<NewComplaintPage />} />
-                  <Route path="complaints" element={<MyComplaintsPage />} />
-                  <Route path="complaints/:id" element={<ComplaintDetailPage />} />
-                  <Route path="notifications" element={<NotificationsPage />} />
-                  <Route path="profile" element={<ProfilePage />} />
-                  <Route path="settings" element={<SettingsPage />} />
-                </Route>
+                  {/* 2. Student / Requester Portal */}
+                  <Route
+                    path="/student"
+                    element={
+                      <ProtectedRoute>
+                        <StudentLayout />
+                      </ProtectedRoute>
+                    }
+                  >
+                    <Route index element={<Navigate to="/student/dashboard" replace />} />
+                    <Route path="dashboard" element={<StudentDashboard />} />
+                    <Route path="new-complaint" element={<NewComplaintPage />} />
+                    <Route path="complaints/new" element={<Navigate to="/student/new-complaint" replace />} />
+                    <Route path="complaints" element={<MyComplaintsPage />} />
+                    <Route path="complaints/:id" element={<ComplaintDetailPage />} />
+                    <Route path="notifications" element={<NotificationsPage />} />
+                    <Route path="profile" element={<ProfilePage />} />
+                    <Route path="settings" element={<SettingsPage />} />
+                  </Route>
 
                 {/* 3. Administrator Experience */}
                 <Route
@@ -210,7 +213,8 @@ export default function App() {
                 {/* 5. 404 Catch-All */}
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>
-            </BrowserRouter>
+            </ErrorBoundary>
+          </BrowserRouter>
 
             <Toaster
               position="top-right"

@@ -226,7 +226,9 @@ export default function ReportsPage() {
                         {cat.name}
                       </td>
                       <td className="p-2.5 font-bold">{cat.count}</td>
-                      <td className="p-2.5 text-slate-500">{cat.slaHours || 24} hours</td>
+                      <td className="p-2.5 text-slate-500">
+                        {typeof cat.slaHours === 'object' ? (cat.slaHours?.Medium || 24) : (cat.slaHours || 24)} hours
+                      </td>
                     </tr>
                   ))}
                 </tbody>

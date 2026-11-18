@@ -354,7 +354,7 @@ export default function StudentDashboard() {
                       {cat.name}
                     </span>
                     <span className="text-[10px] text-slate-500 block truncate">
-                      {cat.subcategories?.[0] || 'Campus maintenance'}
+                      {cat.subCategories?.[0] || cat.subcategories?.[0] || 'Campus maintenance'}
                     </span>
                   </button>
                 );
