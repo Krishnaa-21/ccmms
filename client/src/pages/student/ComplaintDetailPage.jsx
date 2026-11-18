@@ -60,8 +60,8 @@ export default function ComplaintDetailPage() {
   });
 
   const detailData = data?.data || {};
-  const complaint = detailData.complaint;
-  const history = detailData.history || [];
+  const complaint = detailData.complaint || (detailData.id ? detailData : null);
+  const history = detailData.history || detailData.statusHistory || [];
   const comments = detailData.comments || [];
   const feedback = detailData.feedback || complaint?.feedback;
 

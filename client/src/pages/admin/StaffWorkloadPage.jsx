@@ -33,14 +33,14 @@ export default function StaffWorkloadPage() {
     queryKey: ['admin-staff-workload'],
     queryFn: () => adminApi.getUsers({ role: 'staff', limit: 50 })
   });
-  const staffList = usersRes?.data?.users || [];
+  const staffList = Array.isArray(usersRes?.data) ? usersRes.data : (usersRes?.data?.users || []);
 
   // 2. Active complaints query
   const { data: compRes, refetch: refetchComplaints } = useQuery({
     queryKey: ['admin-active-work-orders'],
     queryFn: () => complaintApi.getComplaints({ limit: 100 })
   });
-  const allComplaints = compRes?.data?.complaints || [];
+  const allComplaints = Array.isArray(compRes?.data) ? compRes.data : (compRes?.data?.complaints || []);
 
   // Filter staff by specialty
   const filteredStaff = staffList.filter((s) => {

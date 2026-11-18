@@ -22,6 +22,7 @@ export const getComplaints = asyncHandler(async (req, res) => {
   res.json({
     success: true,
     data: result.complaints,
+    complaints: result.complaints,
     pagination: result.pagination
   });
 });
@@ -30,7 +31,11 @@ export const getComplaintById = asyncHandler(async (req, res) => {
   const complaint = await complaintService.getComplaintById(req.params.id, req.user);
   res.json({
     success: true,
-    data: complaint
+    data: complaint,
+    complaint,
+    history: complaint.statusHistory || [],
+    comments: complaint.comments || [],
+    feedback: complaint.feedback
   });
 });
 

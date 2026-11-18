@@ -51,7 +51,11 @@ export default function QRCodesPage() {
     }
   });
 
-  const locations = locationsData || [];
+  const locations = Array.isArray(locationsData)
+    ? locationsData
+    : Array.isArray(locationsData?.locations)
+    ? locationsData.locations
+    : [];
 
   // Generate QR data URLs for each location
   useEffect(() => {

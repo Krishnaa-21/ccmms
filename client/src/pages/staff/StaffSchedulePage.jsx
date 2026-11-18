@@ -25,7 +25,7 @@ export default function StaffSchedulePage() {
     queryKey: ['staff-schedule-tasks'],
     queryFn: () => staffApi.getMyTasks({ limit: 100 })
   });
-  const allTasks = tasksRes?.data?.complaints || [];
+  const allTasks = Array.isArray(tasksRes?.data) ? tasksRes.data : (tasksRes?.data?.complaints || []);
 
   // Active / Upcoming tasks with due dates
   const activeTasks = allTasks.filter(

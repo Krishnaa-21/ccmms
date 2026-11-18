@@ -72,56 +72,72 @@ export default function AdminDashboard() {
     queryKey: ['admin-attention'],
     queryFn: () => adminApi.getAttentionNeeded()
   });
-  const attentionList = attentionRes?.data || [];
+  const rawAttention = attentionRes?.data;
+  const attentionList = Array.isArray(rawAttention)
+    ? rawAttention
+    : rawAttention && typeof rawAttention === 'object'
+    ? [
+        ...(rawAttention.urgentTickets || []),
+        ...(rawAttention.overdueTickets || []),
+        ...(rawAttention.unassignedTickets || [])
+      ].filter((ticket, index, self) => index === self.findIndex((t) => t.id === ticket.id))
+    : [];
 
   // 3. Category breakdown
   const { data: categoryRes } = useQuery({
     queryKey: ['admin-by-category'],
     queryFn: () => adminApi.getByCategory()
   });
-  const categoryData = categoryRes?.data || [];
+  const categoryData = (Array.isArray(categoryRes?.data) ? categoryRes.data : []).map((cat) => ({
+    ...cat,
+    name: cat.name || cat.categoryName,
+    count: cat.count ?? cat.total ?? 0
+  }));
 
   // 4. Status breakdown
   const { data: statusRes } = useQuery({
     queryKey: ['admin-by-status'],
     queryFn: () => adminApi.getByStatus()
   });
-  const statusData = statusRes?.data || [];
+  const rawStatus = statusRes?.data || {};
+  const statusData = Array.isArray(rawStatus)
+    ? rawStatus
+    : Object.entries(rawStatus).map(([status, count]) => ({ status, count }));
 
   // 5. Monthly trend
   const { data: trendRes } = useQuery({
     queryKey: ['admin-monthly-trend'],
     queryFn: () => adminApi.getMonthlyTrend()
   });
-  const trendData = trendRes?.data || [];
+  const trendData = Array.isArray(trendRes?.data) ? trendRes.data : [];
 
   // 6. Staff performance
   const { data: staffRes } = useQuery({
     queryKey: ['admin-staff-performance'],
     queryFn: () => adminApi.getStaffPerformance()
   });
-  const staffList = staffRes?.data || [];
+  const staffList = Array.isArray(staffRes?.data) ? staffRes.data : [];
 
   // 7. Building hotspots
   const { data: buildingRes } = useQuery({
     queryKey: ['admin-by-building'],
     queryFn: () => adminApi.getByBuilding()
   });
-  const buildingList = buildingRes?.data || [];
+  const buildingList = Array.isArray(buildingRes?.data) ? buildingRes.data : [];
 
   // 8. Audit logs
   const { data: auditRes } = useQuery({
     queryKey: ['admin-recent-audit'],
     queryFn: () => adminApi.getAuditLogs({ limit: 6 })
   });
-  const auditLogs = auditRes?.data || [];
+  const auditLogs = Array.isArray(auditRes?.data) ? auditRes.data : [];
 
   // 9. Phase 5: Predictive Facilities Insights
   const { data: insightsRes, isLoading: loadingInsights } = useQuery({
     queryKey: ['admin-predictive-insights'],
     queryFn: () => adminApi.getPredictiveInsights()
   });
-  const insightsList = insightsRes?.data || [];
+  const insightsList = Array.isArray(insightsRes?.data) ? insightsRes.data : [];
 
   const formatHours = (hrs) => {
     if (!hrs && hrs !== 0) return 'N/A';

@@ -6,6 +6,7 @@ export const getUsers = asyncHandler(async (req, res) => {
   res.json({
     success: true,
     data: result.users,
+    users: result.users,
     pagination: result.pagination
   });
 });

@@ -34,7 +34,7 @@ export default function StaffDashboard() {
     queryKey: ['staff-my-tasks-summary'],
     queryFn: () => staffApi.getMyTasks({ limit: 50 })
   });
-  const tasks = tasksRes?.data?.complaints || [];
+  const tasks = Array.isArray(tasksRes?.data) ? tasksRes.data : (tasksRes?.data?.complaints || []);
 
   // 2. My performance query
   const { data: perfRes } = useQuery({

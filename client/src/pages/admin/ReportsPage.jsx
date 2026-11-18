@@ -49,7 +49,11 @@ export default function ReportsPage() {
     queryKey: ['admin-reports-categories'],
     queryFn: () => adminApi.getByCategory()
   });
-  const categoriesData = catRes?.data || [];
+  const categoriesData = (catRes?.data || []).map((c) => ({
+    ...c,
+    name: c.name || c.categoryName,
+    count: c.count ?? c.total ?? 0
+  }));
 
   // Query: Staff performance
   const { data: staffRes } = useQuery({

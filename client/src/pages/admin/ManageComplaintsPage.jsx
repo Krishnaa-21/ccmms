@@ -137,7 +137,7 @@ export default function ManageComplaintsPage() {
     queryKey: ['admin-staff-users'],
     queryFn: () => adminApi.getUsers({ role: 'staff', limit: 50 })
   });
-  const staffUsers = usersRes?.data?.users || [];
+  const staffUsers = Array.isArray(usersRes?.data) ? usersRes.data : (usersRes?.data?.users || []);
 
   // Query: Categories
   const { data: categories = [] } = useQuery({
@@ -163,8 +163,8 @@ export default function ManageComplaintsPage() {
       })
   });
 
-  const complaints = data?.data?.complaints || [];
-  const pagination = data?.data?.pagination || { total: 0, page: 1, limit, totalPages: 1 };
+  const complaints = Array.isArray(data?.data) ? data.data : (data?.data?.complaints || []);
+  const pagination = data?.pagination || data?.data?.pagination || { total: complaints.length, page: 1, limit, totalPages: 1 };
 
   // Query: Detail for selected complaint
   const { data: activeDetailRes, refetch: refetchActiveDetail } = useQuery({
@@ -172,8 +172,8 @@ export default function ManageComplaintsPage() {
     queryFn: () => complaintApi.getComplaintById(activeTicketId),
     enabled: !!activeTicketId
   });
-  const activeComplaint = activeDetailRes?.data?.complaint;
-  const activeHistory = activeDetailRes?.data?.history || [];
+  const activeComplaint = activeDetailRes?.data?.complaint || activeDetailRes?.data;
+  const activeHistory = activeDetailRes?.data?.history || activeDetailRes?.data?.statusHistory || [];
   const activeComments = activeDetailRes?.data?.comments || [];
   const activeFeedback = activeDetailRes?.data?.feedback || activeComplaint?.feedback;
 

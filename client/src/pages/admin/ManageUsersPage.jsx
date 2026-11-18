@@ -60,8 +60,8 @@ export default function ManageUsersPage() {
       })
   });
 
-  const users = data?.data?.users || [];
-  const pagination = data?.data?.pagination || { total: 0, page: 1, limit, totalPages: 1 };
+  const users = Array.isArray(data?.data) ? data.data : (data?.data?.users || []);
+  const pagination = data?.pagination || data?.data?.pagination || { total: users.length, page: 1, limit, totalPages: 1 };
 
   // Create User Submit
   const handleCreateSubmit = async (e) => {

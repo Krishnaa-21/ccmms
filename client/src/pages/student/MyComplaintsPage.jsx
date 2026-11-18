@@ -84,8 +84,8 @@ export default function MyComplaintsPage() {
       })
   });
 
-  const complaints = data?.data?.complaints || [];
-  const pagination = data?.data?.pagination || { total: 0, page: 1, limit: 10, totalPages: 1 };
+  const complaints = Array.isArray(data?.data) ? data.data : (data?.data?.complaints || []);
+  const pagination = data?.pagination || data?.data?.pagination || { total: complaints.length, page: 1, limit: 10, totalPages: 1 };
 
   const formatDate = (isoString) => {
     if (!isoString) return '';

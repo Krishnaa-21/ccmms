@@ -33,7 +33,11 @@ export default function SentMessagesPage() {
     }
   });
 
-  const messages = messagesData || [];
+  const messages = Array.isArray(messagesData)
+    ? messagesData
+    : Array.isArray(messagesData?.messages)
+    ? messagesData.messages
+    : [];
 
   const filteredMessages = messages.filter((m) => {
     if (!search.trim()) return true;

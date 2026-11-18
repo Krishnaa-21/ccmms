@@ -46,7 +46,7 @@ export default function StudentDashboard() {
     queryFn: () => complaintApi.getCategories()
   });
 
-  const complaints = data?.data?.complaints || [];
+  const complaints = Array.isArray(data?.data) ? data.data : (data?.data?.complaints || []);
 
   // Calculate statistics
   const totalCount = complaints.length;

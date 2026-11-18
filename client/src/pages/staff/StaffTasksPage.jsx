@@ -56,7 +56,7 @@ export default function StaffTasksPage() {
     queryKey: ['staff-all-tasks'],
     queryFn: () => staffApi.getMyTasks({ limit: 100, sortBy: 'createdAt', sortOrder: 'desc' })
   });
-  const allTasks = tasksRes?.data?.complaints || [];
+  const allTasks = Array.isArray(tasksRes?.data) ? tasksRes.data : (tasksRes?.data?.complaints || []);
 
   // 2. Fetch detail for active task
   const { data: detailRes, refetch: refetchDetail } = useQuery({
@@ -64,9 +64,9 @@ export default function StaffTasksPage() {
     queryFn: () => complaintApi.getComplaintById(activeTaskId),
     enabled: !!activeTaskId
   });
-  const activeTask = detailRes?.data?.complaint;
+  const activeTask = detailRes?.data?.complaint || detailRes?.data;
   const activeComments = detailRes?.data?.comments || [];
-  const activeHistory = detailRes?.data?.history || [];
+  const activeHistory = detailRes?.data?.history || detailRes?.data?.statusHistory || [];
   const activeFeedback = detailRes?.data?.feedback || activeTask?.feedback;
 
   // Filter tasks by tab and search

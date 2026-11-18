@@ -50,7 +50,11 @@ export default function PreventiveMaintenancePage() {
     }
   });
 
-  const plans = plansData || [];
+  const plans = Array.isArray(plansData)
+    ? plansData
+    : Array.isArray(plansData?.plans)
+    ? plansData.plans
+    : [];
 
   // Metrics
   const activePlans = plans.filter((p) => p.isActive);

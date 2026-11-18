@@ -40,13 +40,13 @@ export default function ReviewQueuePage() {
     queryKey: ['admin-staff-users'],
     queryFn: () => adminApi.getUsers({ role: 'staff', limit: 50 })
   });
-  const staffList = usersRes?.data?.users || [];
+  const staffList = Array.isArray(usersRes?.data) ? usersRes.data : (usersRes?.data?.users || []);
 
   const [triageStates, setTriageStates] = useState({});
   const [rejectingId, setRejectingId] = useState(null);
   const [rejectReason, setRejectReason] = useState('');
 
-  const complaints = data?.data?.complaints || [];
+  const complaints = Array.isArray(data?.data) ? data.data : (data?.data?.complaints || []);
 
   // Helper to get suggested staff by category
   const getSuggestedStaff = (complaint) => {

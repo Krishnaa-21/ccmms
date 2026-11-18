@@ -14,7 +14,8 @@ export const getByCategory = asyncHandler(async (req, res) => {
 
 export const getByStatus = asyncHandler(async (req, res) => {
   const data = await analyticsService.getByStatus();
-  res.json({ success: true, data });
+  const chartData = Object.entries(data).map(([status, count]) => ({ status, count }));
+  res.json({ success: true, data: chartData, counts: data });
 });
 
 export const getByPriority = asyncHandler(async (req, res) => {
@@ -44,7 +45,24 @@ export const getStaffPerformance = asyncHandler(async (req, res) => {
 
 export const getAttentionNeeded = asyncHandler(async (req, res) => {
   const data = await analyticsService.getAttentionNeeded();
-  res.json({ success: true, data });
+  const allTickets = [
+    ...(data.urgentTickets || []),
+    ...(data.overdueTickets || []),
+    ...(data.unassignedTickets || [])
+  ].filter((ticket, index, self) => index === self.findIndex((t) => t.id === ticket.id));
+
+  res.json({
+    success: true,
+    data: allTickets,
+    stats: {
+      urgentCount: data.urgentCount,
+      overdueCount: data.overdueCount,
+      unassignedCount: data.unassignedCount
+    },
+    urgentTickets: data.urgentTickets,
+    overdueTickets: data.overdueTickets,
+    unassignedTickets: data.unassignedTickets
+  });
 });
 
 export const getMyPerformance = asyncHandler(async (req, res) => {
