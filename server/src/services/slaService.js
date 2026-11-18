@@ -4,7 +4,7 @@ import { notificationService } from './notificationService.js';
 export const slaService = {
   /**
    * Scans all active complaints, flags overdue breaches,
-   * updates escalation levels (1 and 2), and dispatches alerts.
+   * updates escalation levels (1 and 2), auto-bumps priority, and dispatches alerts.
    */
   async checkAndEscalateOverdueComplaints() {
     const activeComplaints = await complaintRepo.findWhere((c) =>
@@ -31,6 +31,7 @@ export const slaService = {
         let isOverdue = true;
         let escalationLevel = comp.escalationLevel || 0;
         let escalatedAt = comp.escalatedAt;
+        let priority = comp.priority;
         let shouldUpdate = false;
 
         if (!comp.isOverdue) {
@@ -60,12 +61,17 @@ export const slaService = {
           shouldUpdate = true;
           escalatedCount++;
 
+          // Auto-bump priority to Urgent on Level 2
+          if (priority !== 'Urgent') {
+            priority = 'Urgent';
+          }
+
           // Notify Admins of Critical Level 2 Escalation
           for (const admin of admins) {
             await notificationService.createNotification({
               userId: admin.id,
               title: `🚨 Critical Escalation (Level 2): ${comp.referenceNumber}`,
-              message: `Ticket "${comp.title}" (${comp.priority}) breached SLA by > 50%. Assigned to ${comp.assignedTo?.name || 'Unassigned'}. Immediate Dean intervention required.`,
+              message: `Ticket "${comp.title}" (${comp.priority} → Urgent) breached SLA by > 50%. Assigned to ${comp.assignedTo?.name || 'Unassigned'}. Immediate intervention required.`,
               type: 'sla_escalation_level_2',
               link: `/admin/complaints/${comp.id}`
             });
@@ -76,7 +82,7 @@ export const slaService = {
             entityType: 'Complaint',
             entityId: comp.id,
             actor: { id: 'cron_sla_engine', name: 'SLA Monitor Cron', role: 'system' },
-            details: `Escalated to Level 2 (50%+ breach). Total breach duration: ${(breachMs / (1000 * 3600)).toFixed(1)} hours.`
+            details: `Escalated to Level 2 (50%+ breach). Priority auto-bumped to Urgent. Total breach duration: ${(breachMs / (1000 * 3600)).toFixed(1)} hours.`
           });
         } else if (breachRatio >= 0.25 && escalationLevel < 1) {
           escalationLevel = 1;
@@ -84,12 +90,19 @@ export const slaService = {
           shouldUpdate = true;
           escalatedCount++;
 
+          // Auto-bump priority: Low -> Medium, Medium -> High
+          if (priority === 'Low') {
+            priority = 'Medium';
+          } else if (priority === 'Medium') {
+            priority = 'High';
+          }
+
           // Notify Admins of Level 1 Escalation
           for (const admin of admins) {
             await notificationService.createNotification({
               userId: admin.id,
               title: `⚠️ SLA Escalation (Level 1): ${comp.referenceNumber}`,
-              message: `Ticket "${comp.title}" has exceeded SLA deadline by 25%. Supervisor review needed.`,
+              message: `Ticket "${comp.title}" has exceeded SLA deadline by 25%. Priority escalated to ${priority}. Supervisor review needed.`,
               type: 'sla_escalation_level_1',
               link: `/admin/complaints/${comp.id}`
             });
@@ -100,7 +113,7 @@ export const slaService = {
             entityType: 'Complaint',
             entityId: comp.id,
             actor: { id: 'cron_sla_engine', name: 'SLA Monitor Cron', role: 'system' },
-            details: `Escalated to Level 1 (25%+ breach). Total breach duration: ${(breachMs / (1000 * 3600)).toFixed(1)} hours.`
+            details: `Escalated to Level 1 (25%+ breach). Priority adjusted to ${priority}. Total breach duration: ${(breachMs / (1000 * 3600)).toFixed(1)} hours.`
           });
         }
 
@@ -108,7 +121,9 @@ export const slaService = {
           await complaintRepo.update(comp.id, {
             isOverdue: true,
             escalationLevel,
-            escalatedAt
+            escalatedAt,
+            priority,
+            updatedAt: now.toISOString()
           });
         }
       }

@@ -61,3 +61,4 @@ export function OverdueBadge({ escalationLevel = 0, className }) {
 }
 
 export default PriorityBadge;
+

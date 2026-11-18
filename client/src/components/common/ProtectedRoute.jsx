@@ -50,3 +50,4 @@ export function RoleRoute({ allowedRoles = [], children }) {
 }
 
 export default ProtectedRoute;
+

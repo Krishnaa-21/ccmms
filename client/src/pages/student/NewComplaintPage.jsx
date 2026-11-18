@@ -71,9 +71,9 @@ export default function NewComplaintPage() {
     priorityReason: '',
     suggestedPriority: '',
     building: searchParams.get('building') || 'Main Academic Block',
-    floor: 'Ground Floor',
-    room: '',
-    landmark: '',
+    floor: searchParams.get('floor') || 'Ground Floor',
+    room: searchParams.get('room') || '',
+    landmark: searchParams.get('landmark') || '',
     preferredContactTime: 'Anytime',
     contactPhone: ''
   });
@@ -165,29 +165,24 @@ export default function NewComplaintPage() {
 
   // Live duplicate detection
   useEffect(() => {
-    if (!formData.title || formData.title.length < 6 || !formData.building) return;
+    if (!formData.title || formData.title.length < 4 || !formData.building) return;
 
     const timer = setTimeout(async () => {
       try {
-        const res = await complaintApi.getComplaints({
+        const res = await complaintApi.checkDuplicates({
+          title: formData.title,
           building: formData.building,
-          status: 'Open',
-          limit: 3
+          room: formData.room,
+          categoryId: formData.categoryId
         });
-        if (res.success && res.data?.complaints?.length > 0) {
-          // Filter similar keywords
-          const keywords = formData.title.toLowerCase().split(' ').filter((w) => w.length > 3);
-          const dups = res.data.complaints.filter((c) => {
-            const titleLow = c.title.toLowerCase();
-            return keywords.some((k) => titleLow.includes(k));
-          });
-          setPotentialDuplicates(dups);
+        if (res.success && Array.isArray(res.data)) {
+          setPotentialDuplicates(res.data);
         }
       } catch (_) {}
-    }, 700);
+    }, 500);
 
     return () => clearTimeout(timer);
-  }, [formData.title, formData.building]);
+  }, [formData.title, formData.building, formData.room, formData.categoryId]);
 
   // Handle Category Select
   const handleSelectCategory = (cat) => {
@@ -953,3 +948,4 @@ export default function NewComplaintPage() {
     </div>
   );
 }
+

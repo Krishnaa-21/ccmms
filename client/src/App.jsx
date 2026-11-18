@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, Link, useSearchParams } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Toaster } from 'react-hot-toast';
 
@@ -12,11 +12,16 @@ import StudentLayout from './components/layout/StudentLayout.jsx';
 import AdminLayout from './components/layout/AdminLayout.jsx';
 import StaffLayout from './components/layout/StaffLayout.jsx';
 
+// Phase 5 Global Components
+import CommandPalette from './components/common/CommandPalette.jsx';
+import PWAInstallBanner from './components/common/PWAInstallBanner.jsx';
+
 // Public Pages
 import LandingPage from './pages/public/LandingPage.jsx';
 import LoginPage from './pages/public/LoginPage.jsx';
 import RegisterPage from './pages/public/RegisterPage.jsx';
 import ForgotPasswordPage from './pages/public/ForgotPasswordPage.jsx';
+import PublicIssuesPage from './pages/public/PublicIssuesPage.jsx';
 
 // Student Pages
 import StudentDashboard from './pages/student/StudentDashboard.jsx';
@@ -35,6 +40,9 @@ import StaffWorkloadPage from './pages/admin/StaffWorkloadPage.jsx';
 import ManageUsersPage from './pages/admin/ManageUsersPage.jsx';
 import ReportsPage from './pages/admin/ReportsPage.jsx';
 import AdminSettingsPage from './pages/admin/SettingsPage.jsx';
+import QRCodesPage from './pages/admin/QRCodesPage.jsx';
+import PreventiveMaintenancePage from './pages/admin/PreventiveMaintenancePage.jsx';
+import SentMessagesPage from './pages/admin/SentMessagesPage.jsx';
 
 // Staff Pages
 import StaffDashboard from './pages/staff/StaffDashboard.jsx';
@@ -93,6 +101,18 @@ function PublicRoute({ children }) {
   return children;
 }
 
+// Phase 5: QR Code scan deep-link resolver
+function ReportDeepLink() {
+  const [searchParams] = useSearchParams();
+  const { isAuthenticated, isLoading } = useAuth();
+  if (isLoading) return null;
+  const qs = searchParams.toString() ? `?${searchParams.toString()}` : '';
+  if (isAuthenticated) {
+    return <Navigate to={`/student/new-complaint${qs}`} replace />;
+  }
+  return <Navigate to={`/login?redirect=${encodeURIComponent(`/student/new-complaint${qs}`)}`} replace />;
+}
+
 export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
@@ -100,9 +120,17 @@ export default function App() {
         <AuthProvider>
           <NotificationProvider>
             <BrowserRouter>
+              {/* Phase 5 Global Command Palette & PWA Install Banner */}
+              <CommandPalette />
+              <PWAInstallBanner />
+
               <Routes>
-                {/* 1. Public Website */}
+                {/* 1. Public Website & Transparency Board */}
                 <Route path="/" element={<LandingPage />} />
+                <Route path="/issues" element={<PublicIssuesPage />} />
+                <Route path="/public-board" element={<PublicIssuesPage />} />
+                <Route path="/report" element={<ReportDeepLink />} />
+
                 <Route
                   path="/login"
                   element={
@@ -153,6 +181,10 @@ export default function App() {
                   <Route path="dashboard" element={<AdminDashboard />} />
                   <Route path="complaints" element={<ManageComplaintsPage />} />
                   <Route path="review-queue" element={<ReviewQueuePage />} />
+                  <Route path="queue" element={<ReviewQueuePage />} />
+                  <Route path="qr-codes" element={<QRCodesPage />} />
+                  <Route path="preventive" element={<PreventiveMaintenancePage />} />
+                  <Route path="messages" element={<SentMessagesPage />} />
                   <Route path="workload" element={<StaffWorkloadPage />} />
                   <Route path="users" element={<ManageUsersPage />} />
                   <Route path="reports" element={<ReportsPage />} />

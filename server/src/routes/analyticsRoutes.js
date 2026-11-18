@@ -9,7 +9,8 @@ import {
   getTopRecurringIssues,
   getStaffPerformance,
   getAttentionNeeded,
-  getMyPerformance
+  getMyPerformance,
+  getPredictiveInsights
 } from '../controllers/analyticsController.js';
 import { requireAuth, requireAdmin, requireStaff } from '../middleware/auth.js';
 
@@ -30,6 +31,7 @@ router.get('/monthly-trend', requireAdmin, getMonthlyTrend);
 router.get('/top-recurring-issues', requireAdmin, getTopRecurringIssues);
 router.get('/staff-performance', requireAdmin, getStaffPerformance);
 router.get('/attention-needed', requireAdmin, getAttentionNeeded);
+router.get('/predictive-insights', requireAdmin, getPredictiveInsights);
 
 export default router;
 

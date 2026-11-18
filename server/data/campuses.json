@@ -1,0 +1,52 @@
+[
+  {
+    "id": "apex-campus-main",
+    "name": "Apex Institute of Technology - Main Campus",
+    "city": "Bengaluru, Karnataka",
+    "code": "AIT-MAIN",
+    "address": "Campus Knowledge Park, Electronics City Phase 1, Bengaluru - 560100",
+    "phone": "+91 (080) 4567-8900",
+    "email": "facilities.main@apex.edu",
+    "isActive": true,
+    "stats": {
+      "totalBuildings": 11,
+      "totalRooms": 240,
+      "studentPopulation": 4500,
+      "staffPopulation": 320
+    },
+    "buildings": [
+      "Main Academic Block",
+      "Hostel Block A",
+      "Hostel Block B",
+      "Library",
+      "Physics Lab",
+      "Computer Lab 1",
+      "Seminar Hall",
+      "Canteen",
+      "Sports Complex",
+      "Admin Office"
+    ]
+  },
+  {
+    "id": "apex-campus-city",
+    "name": "Apex City Campus & Innovation Hub",
+    "city": "Bengaluru Central",
+    "code": "AIT-CITY",
+    "address": "Tech Boulevard, MG Road, Bengaluru - 560001",
+    "phone": "+91 (080) 2234-5678",
+    "email": "facilities.city@apex.edu",
+    "isActive": true,
+    "stats": {
+      "totalBuildings": 4,
+      "totalRooms": 85,
+      "studentPopulation": 1200,
+      "staffPopulation": 110
+    },
+    "buildings": [
+      "Innovation Tower",
+      "Startup Incubation Center",
+      "Executive Seminar Block",
+      "Design Thinking Studio"
+    ]
+  }
+]

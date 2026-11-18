@@ -78,6 +78,38 @@ export const suggestPriority = asyncHandler(async (req, res) => {
   });
 });
 
+export const getPublicBoardComplaints = asyncHandler(async (req, res) => {
+  const result = await complaintService.getPublicComplaints(req.query);
+  res.json({
+    success: true,
+    data: result
+  });
+});
+
+export const mergeComplaints = asyncHandler(async (req, res) => {
+  const { duplicateIds, reason } = req.body;
+  const result = await complaintService.mergeComplaints(req.params.id, duplicateIds, reason, req.user);
+  res.json({
+    success: true,
+    message: result.message,
+    data: result
+  });
+});
+
+export const checkDuplicates = asyncHandler(async (req, res) => {
+  const { title, building, room, categoryId } = req.query;
+  const duplicates = await automationService.findDuplicates({
+    title: title || '',
+    building: building || '',
+    room: room || '',
+    categoryId: categoryId || ''
+  });
+  res.json({
+    success: true,
+    data: duplicates
+  });
+});
+
 export default {
   createComplaint,
   getComplaints,
@@ -85,6 +117,9 @@ export default {
   updateComplaint,
   deleteComplaint,
   upvoteComplaint,
-  suggestPriority
+  suggestPriority,
+  getPublicBoardComplaints,
+  mergeComplaints,
+  checkDuplicates
 };
 

@@ -1,4 +1,5 @@
 import { analyticsService } from '../services/analyticsService.js';
+import { predictiveService } from '../services/predictiveService.js';
 import asyncHandler from '../utils/asyncHandler.js';
 
 export const getOverview = asyncHandler(async (req, res) => {
@@ -51,6 +52,11 @@ export const getMyPerformance = asyncHandler(async (req, res) => {
   res.json({ success: true, data });
 });
 
+export const getPredictiveInsights = asyncHandler(async (req, res) => {
+  const data = await predictiveService.generateInsights(req.query.campusId);
+  res.json({ success: true, count: data.length, data });
+});
+
 export default {
   getOverview,
   getByCategory,
@@ -61,6 +67,7 @@ export default {
   getTopRecurringIssues,
   getStaffPerformance,
   getAttentionNeeded,
-  getMyPerformance
+  getMyPerformance,
+  getPredictiveInsights
 };
 

@@ -6,7 +6,10 @@ import {
   updateComplaint,
   deleteComplaint,
   upvoteComplaint,
-  suggestPriority
+  suggestPriority,
+  getPublicBoardComplaints,
+  mergeComplaints,
+  checkDuplicates
 } from '../controllers/complaintController.js';
 import {
   changeStatus,
@@ -36,8 +39,14 @@ import { createCommentSchema, createFeedbackSchema } from '../validations/commen
 
 const router = express.Router();
 
-// All complaint routes require authentication
+// Public Transparency Issues Board (scrubbed of personal PII)
+router.get('/public-board', getPublicBoardComplaints);
+
+// All complaint routes below require authentication
 router.use(requireAuth);
+
+// Duplicate Checking
+router.get('/check-duplicates', checkDuplicates);
 
 // 1. Complaint CRUD
 router.post('/', handleUpload, validateBody(createComplaintSchema), createComplaint);
@@ -48,8 +57,9 @@ router.get('/:id', getComplaintById);
 router.patch('/:id', requireAdmin, validateBody(updateComplaintSchema), updateComplaint);
 router.delete('/:id', requireAdmin, deleteComplaint);
 
-// 2. Upvoting ("Me Too")
+// 2. Upvoting ("Me Too") & Merging
 router.post('/:id/upvote', upvoteComplaint);
+router.post('/:id/merge', requireAdmin, mergeComplaints);
 
 // 3. Workflow transitions
 router.patch('/:id/status', validateBody(statusChangeSchema), changeStatus);

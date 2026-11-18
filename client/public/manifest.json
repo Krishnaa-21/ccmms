@@ -1,0 +1,18 @@
+{
+  "short_name": "Apex CCMMS",
+  "name": "Campus Complaint & Maintenance Management System",
+  "description": "Centralized facility repairs, preventive scheduling, and campus operations portal for Apex Institute of Technology",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "192x192 512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#0f172a",
+  "theme_color": "#1e3a8a",
+  "display": "standalone",
+  "orientation": "portrait",
+  "categories": ["education", "productivity", "utilities"]
+}

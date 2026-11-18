@@ -13,7 +13,8 @@ export const COMPLAINT_STATUS = {
   RESOLVED: 'Resolved',
   CLOSED: 'Closed',
   REJECTED: 'Rejected',
-  REOPENED: 'Reopened'
+  REOPENED: 'Reopened',
+  MERGED: 'Merged'
 };
 
 export const COMPLAINT_PRIORITY = {
@@ -43,13 +44,14 @@ export const STATUS_TRANSITIONS = {
     Reopened: ['In Progress']
   },
   admin: {
-    Submitted: ['Under Review', 'Assigned', 'Rejected'],
-    'Under Review': ['Assigned', 'Rejected'],
-    Assigned: ['In Progress', 'Under Review', 'Rejected'],
-    'In Progress': ['Awaiting Parts', 'Resolved', 'Assigned'],
-    'Awaiting Parts': ['In Progress', 'Resolved'],
+    Submitted: ['Under Review', 'Assigned', 'Rejected', 'Merged'],
+    'Under Review': ['Assigned', 'Rejected', 'Merged'],
+    Assigned: ['In Progress', 'Under Review', 'Rejected', 'Merged'],
+    'In Progress': ['Awaiting Parts', 'Resolved', 'Assigned', 'Merged'],
+    'Awaiting Parts': ['In Progress', 'Resolved', 'Merged'],
     Resolved: ['Closed', 'Reopened'],
-    Reopened: ['Assigned', 'In Progress', 'Under Review'],
+    Reopened: ['Assigned', 'In Progress', 'Under Review', 'Merged'],
+    Merged: ['Resolved', 'Closed'],
     Closed: ['Reopened'],
     Rejected: ['Under Review']
   }

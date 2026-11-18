@@ -22,7 +22,8 @@ import {
   Power,
   ShieldAlert,
   Wrench,
-  ShieldCheck
+  ShieldCheck,
+  Building2
 } from 'lucide-react';
 import toast from 'react-hot-toast';
 
@@ -37,6 +38,9 @@ export function Topbar({ onMenuClick }) {
   const [isTrackModalOpen, setIsTrackModalOpen] = useState(false);
   const [isScanningSla, setIsScanningSla] = useState(false);
   const [isUpdatingAvailability, setIsUpdatingAvailability] = useState(false);
+  const [selectedCampus, setSelectedCampus] = useState(
+    localStorage.getItem('ccmms_active_campus') || 'apex-campus-main'
+  );
 
   const notifRef = useRef(null);
   const profileRef = useRef(null);
@@ -137,6 +141,32 @@ export function Topbar({ onMenuClick }) {
 
         {/* Right Action Controls */}
         <div className="flex items-center gap-2 sm:gap-3">
+          {/* Admin Multi-Campus Switcher */}
+          {role === 'admin' && (
+            <div className="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-lg border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-300">
+              <Building2 className="w-3.5 h-3.5 text-blue-600" />
+              <select
+                value={selectedCampus}
+                onChange={(e) => {
+                  setSelectedCampus(e.target.value);
+                  localStorage.setItem('ccmms_active_campus', e.target.value);
+                  toast.success(
+                    `Switched campus view to ${
+                      e.target.value === 'apex-campus-main'
+                        ? 'Main Campus (Bangalore)'
+                        : 'City Innovation Hub'
+                    }`
+                  );
+                  window.dispatchEvent(new Event('campus-changed'));
+                }}
+                className="bg-transparent border-none focus:outline-none cursor-pointer pr-1"
+              >
+                <option value="apex-campus-main">AIT Main (Bengaluru)</option>
+                <option value="apex-campus-city">AIT City Hub</option>
+              </select>
+            </div>
+          )}
+
           {/* Admin SLA Trigger Action */}
           {role === 'admin' && (
             <button

@@ -36,7 +36,9 @@ import {
   Lock,
   RotateCcw,
   ShieldCheck,
-  ArrowRight
+  ArrowRight,
+  Layers,
+  GitMerge
 } from 'lucide-react';
 import toast from 'react-hot-toast';
 
@@ -101,6 +103,10 @@ export default function ManageComplaintsPage() {
   const [selectedIds, setSelectedIds] = useState([]);
   const [bulkAssignModal, setBulkAssignModal] = useState(false);
   const [selectedBulkStaff, setSelectedBulkStaff] = useState('');
+  const [mergeModalOpen, setMergeModalOpen] = useState(false);
+  const [mergeParentId, setMergeParentId] = useState('');
+  const [mergeChildIds, setMergeChildIds] = useState([]);
+  const [mergeReason, setMergeReason] = useState('Duplicate report of same physical issue');
 
   // Detail Drawer / Modal State
   const [activeTicketId, setActiveTicketId] = useState(searchParams.get('id') || null);
@@ -256,6 +262,35 @@ export default function ManageComplaintsPage() {
       refetch();
     } catch (err) {
       toast.error('Failed bulk closure (tickets must be Resolved)');
+    }
+  };
+
+  const handleOpenMergeModal = () => {
+    if (selectedIds.length < 2) {
+      toast.error('Select at least two tickets to merge');
+      return;
+    }
+    setMergeParentId(selectedIds[0]);
+    setMergeChildIds(selectedIds.slice(1));
+    setMergeModalOpen(true);
+  };
+
+  const handleConfirmMerge = async () => {
+    if (!mergeParentId || mergeChildIds.length === 0) {
+      toast.error('Please specify a master parent ticket and child duplicates');
+      return;
+    }
+    try {
+      const res = await complaintApi.mergeComplaints(mergeParentId, {
+        duplicateIds: mergeChildIds,
+        reason: mergeReason
+      });
+      toast.success(res.message || 'Duplicate tickets successfully merged');
+      setSelectedIds([]);
+      setMergeModalOpen(false);
+      refetch();
+    } catch (err) {
+      toast.error(err.response?.data?.message || 'Failed to merge tickets');
     }
   };
 
@@ -620,6 +655,18 @@ export default function ManageComplaintsPage() {
               <CheckCircle2 className="w-3.5 h-3.5 mr-1" />
               Close Resolved
             </Button>
+
+            {selectedIds.length >= 2 && (
+              <Button
+                variant="outline"
+                size="sm"
+                onClick={handleOpenMergeModal}
+                className="bg-amber-950/80 text-amber-300 border-amber-800 hover:bg-amber-900"
+              >
+                <GitMerge className="w-3.5 h-3.5 mr-1" />
+                Merge Duplicates
+              </Button>
+            )}
 
             <button
               onClick={() => setSelectedIds([])}
@@ -1255,6 +1302,87 @@ export default function ManageComplaintsPage() {
           </div>
         </Modal>
       )}
+
+      {/* Duplicate Merging Modal */}
+      {mergeModalOpen && (
+        <Modal
+          isOpen={mergeModalOpen}
+          onClose={() => setMergeModalOpen(false)}
+          title="Merge Duplicate Complaints"
+          size="md"
+        >
+          <div className="space-y-4 text-xs text-slate-700 dark:text-slate-300">
+            <p className="leading-relaxed">
+              Merging consolidates multiple reports of the same physical fault into a single master ticket.
+              Duplicate tickets will follow the master ticket's status and their reporters will be notified.
+            </p>
+
+            <div>
+              <label className="block font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+                Master Parent Ticket *
+              </label>
+              <select
+                value={mergeParentId}
+                onChange={(e) => {
+                  const newParent = e.target.value;
+                  setMergeParentId(newParent);
+                  setMergeChildIds(selectedIds.filter((id) => id !== newParent));
+                }}
+                className="w-full p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-white"
+              >
+                {selectedIds.map((id) => {
+                  const ticket = complaints.find((c) => c.id === id);
+                  return (
+                    <option key={id} value={id}>
+                      {ticket ? `${ticket.referenceNumber || ticket.trackingNumber} - ${ticket.title}` : id}
+                    </option>
+                  );
+                })}
+              </select>
+            </div>
+
+            <div>
+              <label className="block font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+                Child Tickets to Merge ({mergeChildIds.length})
+              </label>
+              <div className="p-2.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 space-y-1 max-h-32 overflow-y-auto font-mono text-[11px]">
+                {mergeChildIds.map((cid) => {
+                  const t = complaints.find((c) => c.id === cid);
+                  return (
+                    <div key={cid} className="flex items-center justify-between text-slate-600 dark:text-slate-400">
+                      <span>{t ? `${t.referenceNumber || t.trackingNumber} - ${t.title}` : cid}</span>
+                      <span className="text-[10px] text-amber-600 font-sans font-semibold">Will be marked Merged</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+
+            <div>
+              <label className="block font-semibold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5">
+                Merge Explanation Note
+              </label>
+              <input
+                type="text"
+                value={mergeReason}
+                onChange={(e) => setMergeReason(e.target.value)}
+                placeholder="e.g. Identical fan failure reported in Room 204"
+                className="w-full p-2.5 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-white"
+              />
+            </div>
+
+            <div className="flex justify-end gap-2 pt-3 border-t border-slate-100 dark:border-slate-800">
+              <Button variant="ghost" size="sm" onClick={() => setMergeModalOpen(false)}>
+                Cancel
+              </Button>
+              <Button variant="primary" size="sm" onClick={handleConfirmMerge}>
+                Confirm &amp; Merge Tickets
+              </Button>
+            </div>
+          </div>
+        </Modal>
+      )}
     </div>
   );
 }
+

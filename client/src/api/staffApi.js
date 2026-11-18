@@ -57,7 +57,18 @@ export const staffApi = {
       estimatedCost
     });
     return res.data;
+  },
+
+  getInventory: async () => {
+    const res = await apiClient.get('/inventory');
+    return res.data;
+  },
+
+  recordPartsUsed: async (complaintId, parts) => {
+    const res = await apiClient.post('/inventory/record-usage', { complaintId, parts });
+    return res.data;
   }
 };
 
 export default staffApi;
+

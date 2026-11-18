@@ -182,7 +182,79 @@ export const adminApi = {
   triggerSlaScan: async () => {
     const res = await apiClient.post('/admin/trigger-sla-scan');
     return res.data;
+  },
+
+  // --- Phase 5: Preventive Maintenance ---
+  getPreventivePlans: async (params = {}) => {
+    const res = await apiClient.get('/preventive-plans', { params });
+    return res.data;
+  },
+
+  createPreventivePlan: async (planData) => {
+    const res = await apiClient.post('/preventive-plans', planData);
+    return res.data;
+  },
+
+  updatePreventivePlan: async (id, planData) => {
+    const res = await apiClient.patch(`/preventive-plans/${id}`, planData);
+    return res.data;
+  },
+
+  deletePreventivePlan: async (id) => {
+    const res = await apiClient.delete(`/preventive-plans/${id}`);
+    return res.data;
+  },
+
+  runPreventivePlanNow: async (id) => {
+    const res = await apiClient.post(`/preventive-plans/${id}/run-now`);
+    return res.data;
+  },
+
+  // --- Phase 5: QR Codes & Campus Locations ---
+  getLocations: async (params = {}) => {
+    const res = await apiClient.get('/locations', { params });
+    return res.data;
+  },
+
+  createLocation: async (locationData) => {
+    const res = await apiClient.post('/locations', locationData);
+    return res.data;
+  },
+
+  getCampuses: async () => {
+    const res = await apiClient.get('/locations/campuses');
+    return res.data;
+  },
+
+  // --- Phase 5: Outbox / Sent Messages Inspector ---
+  getSentMessages: async (params = {}) => {
+    const res = await apiClient.get('/notifications/sent-messages', { params });
+    return res.data;
+  },
+
+  // --- Phase 5: Predictive Facilities Insights ---
+  getPredictiveInsights: async (params = {}) => {
+    const res = await apiClient.get('/analytics/predictive-insights', { params });
+    return res.data;
+  },
+
+  // --- Phase 5: Spare Parts Inventory ---
+  getInventory: async () => {
+    const res = await apiClient.get('/inventory');
+    return res.data;
+  },
+
+  recordPartsUsed: async (data) => {
+    const res = await apiClient.post('/inventory/record-usage', data);
+    return res.data;
+  },
+
+  // --- Phase 5: Duplicate Merging ---
+  mergeComplaints: async (parentId, { duplicateIds, reason }) => {
+    const res = await apiClient.post(`/complaints/${parentId}/merge`, { duplicateIds, reason });
+    return res.data;
   }
 };
 
 export default adminApi;
+

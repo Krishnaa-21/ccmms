@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import Sidebar from './Sidebar.jsx';
 import Topbar from './Topbar.jsx';
+import MobileBottomNav from './MobileBottomNav.jsx';
 
 export function StaffLayout() {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -23,12 +24,15 @@ export function StaffLayout() {
         <Topbar onMenuClick={() => setIsMobileOpen(true)} />
 
         {/* Page View */}
-        <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8">
+        <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 pb-24 md:pb-8">
           <div className="max-w-6xl mx-auto space-y-6">
             <Outlet />
           </div>
         </main>
       </div>
+
+      {/* Mobile Sticky Bottom Navigation */}
+      <MobileBottomNav />
     </div>
   );
 }

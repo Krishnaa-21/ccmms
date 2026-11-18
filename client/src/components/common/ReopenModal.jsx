@@ -65,3 +65,4 @@ export function ReopenModal({ isOpen, onClose, complaintId, referenceNumber, onS
 }
 
 export default ReopenModal;
+

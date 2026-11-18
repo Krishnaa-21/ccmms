@@ -1,0 +1,87 @@
+[
+  {
+    "id": "inv_001",
+    "name": "15W T8 LED Batten Light (4ft)",
+    "sku": "ELEC-LED-15W",
+    "category": "Electrical",
+    "quantityInStock": 40,
+    "unit": "pcs",
+    "unitCost": 280,
+    "reorderLevel": 15,
+    "location": "Maintenance Depot Rack E-01",
+    "description": "High-efficiency commercial LED tube fixtures for classrooms and lab bays.",
+    "updatedAt": "2026-11-18T16:53:44.292Z"
+  },
+  {
+    "id": "inv_002",
+    "name": "Brass Bib Cock Tap 15mm (Half-inch)",
+    "sku": "PLUMB-TAP-15B",
+    "category": "Plumbing",
+    "quantityInStock": 28,
+    "unit": "pcs",
+    "unitCost": 350,
+    "reorderLevel": 10,
+    "location": "Maintenance Depot Rack P-04",
+    "description": "Heavy-duty brass water bib taps for student hostel washrooms."
+  },
+  {
+    "id": "inv_003",
+    "name": "Single Pole 16A MCB C-Curve",
+    "sku": "ELEC-MCB-16A",
+    "category": "Electrical",
+    "quantityInStock": 19,
+    "unit": "pcs",
+    "unitCost": 195,
+    "reorderLevel": 10,
+    "location": "Maintenance Depot Rack E-03",
+    "description": "Standard DIN rail miniature circuit breaker for branch lighting distribution boards."
+  },
+  {
+    "id": "inv_004",
+    "name": "Dual Flush Syphon Valve 32mm",
+    "sku": "PLUMB-FLUSH-32",
+    "category": "Plumbing",
+    "quantityInStock": 8,
+    "unit": "pcs",
+    "unitCost": 620,
+    "reorderLevel": 12,
+    "location": "Maintenance Depot Rack P-02",
+    "description": "Water-saving dual flush cistern replacement assembly."
+  },
+  {
+    "id": "inv_005",
+    "name": "Cat6 RJ45 Shielded Keystone Jack",
+    "sku": "NET-KEY-CAT6",
+    "category": "Networking",
+    "quantityInStock": 65,
+    "unit": "pcs",
+    "unitCost": 85,
+    "reorderLevel": 20,
+    "location": "IT Store Rack IT-02",
+    "description": "Modular wall-faceplate ethernet jack for computer lab network drops."
+  },
+  {
+    "id": "inv_006",
+    "name": "Hydraulic Overhead Door Closer Size 3",
+    "sku": "CARP-CLOSER-03",
+    "category": "Carpentry",
+    "quantityInStock": 14,
+    "unit": "pcs",
+    "unitCost": 1250,
+    "reorderLevel": 5,
+    "location": "Hardware Bay Rack H-05",
+    "description": "Commercial fire-rated hydraulic door closing damper for laboratory doors."
+  },
+  {
+    "id": "inv_007",
+    "name": "5-Micron Spun PP Sediment RO Cartridge",
+    "sku": "PLUMB-RO-PP5",
+    "category": "Plumbing",
+    "quantityInStock": 35,
+    "unit": "pcs",
+    "unitCost": 120,
+    "reorderLevel": 15,
+    "location": "Maintenance Depot Rack P-08",
+    "description": "Pre-filtration filter candle for campus commercial water coolers."
+  }
+]

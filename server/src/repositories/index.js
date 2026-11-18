@@ -8,3 +8,6 @@ export { default as commentRepo } from './commentRepo.js';
 export { default as settingsRepo } from './settingsRepo.js';
 export { default as auditLogRepo } from './auditLogRepo.js';
 export { default as sentMessageRepo } from './sentMessageRepo.js';
+export { default as preventivePlanRepo } from './preventivePlanRepo.js';
+export { default as locationRepo } from './locationRepo.js';
+export { default as inventoryRepo } from './inventoryRepo.js';

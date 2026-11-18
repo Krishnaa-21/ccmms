@@ -122,6 +122,49 @@ export const workflowService = {
       }
     }
 
+    // 4. If complaint has merged child tickets, synchronize status to child tickets
+    if (complaint.mergedTicketIds && complaint.mergedTicketIds.length > 0 && ['Resolved', 'Closed'].includes(targetStatus)) {
+      for (const childId of complaint.mergedTicketIds) {
+        try {
+          const childUpdates = {
+            status: targetStatus,
+            updatedAt: now
+          };
+          if (targetStatus === 'Resolved') {
+            childUpdates.resolvedAt = now;
+            childUpdates.resolutionNotes = `Resolved via parent ticket #${complaint.referenceNumber}: ${payload.resolutionNotes || 'Maintenance completed.'}`;
+          } else if (targetStatus === 'Closed') {
+            childUpdates.closedAt = now;
+          }
+          await complaintRepo.update(childId, childUpdates);
+
+          await statusHistoryRepo.create({
+            complaintId: childId,
+            trackingNumber: childId,
+            referenceNumber: childId,
+            fromStatus: 'Merged',
+            status: targetStatus,
+            changedBy: { id: actor.id, name: actor.name, role: actor.role },
+            notes: `Auto-synchronized from parent ticket #${complaint.referenceNumber}`,
+            changedAt: now
+          });
+
+          const child = await complaintRepo.findById(childId);
+          if (child?.createdBy?.id) {
+            await notificationService.createNotification({
+              userId: child.createdBy.id,
+              title: `Merged Ticket ${targetStatus}: ${child.referenceNumber || child.trackingNumber}`,
+              message: `Master ticket #${complaint.referenceNumber} has been ${targetStatus.toLowerCase()}. Your issue has been resolved.`,
+              type: `status_${targetStatus.toLowerCase()}`,
+              link: `/student/complaints/${childId}`
+            });
+          }
+        } catch (syncErr) {
+          console.error(`Failed to sync child complaint ${childId}:`, syncErr);
+        }
+      }
+    }
+
     return updatedComplaint;
   },
 

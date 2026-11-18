@@ -78,6 +78,24 @@ export const complaintApi = {
   getSettings: async () => {
     const res = await apiClient.get('/settings');
     return res.data.data.settings;
+  },
+
+  getPublicBoard: async (params = {}) => {
+    const res = await apiClient.get('/complaints/public-board', { params });
+    return res.data;
+  },
+
+  checkDuplicates: async (params = {}) => {
+    const res = await apiClient.get('/complaints/check-duplicates', { params });
+    return res.data;
+  },
+
+  mergeComplaints: async (parentId, { duplicateIds, reason }) => {
+    const res = await apiClient.post(`/complaints/${parentId}/merge`, {
+      duplicateIds,
+      reason
+    });
+    return res.data;
   }
 };
 

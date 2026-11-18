@@ -19,7 +19,11 @@ import {
   BarChart3,
   Wrench,
   Calendar,
-  Award
+  Award,
+  QrCode,
+  RotateCw,
+  Mail,
+  Compass
 } from 'lucide-react';
 
 export function Sidebar({ isCollapsed, setIsCollapsed, isMobileOpen, setIsMobileOpen }) {
@@ -34,9 +38,13 @@ export function Sidebar({ isCollapsed, setIsCollapsed, isMobileOpen, setIsMobile
         { label: 'Overview', path: '/admin/dashboard', icon: LayoutDashboard },
         { label: 'Complaints', path: '/admin/complaints', icon: ClipboardList },
         { label: 'Review Queue', path: '/admin/review-queue', icon: Sparkles, highlight: true },
+        { label: 'QR Asset Codes', path: '/admin/qr-codes', icon: QrCode },
+        { label: 'Preventive Plans', path: '/admin/preventive', icon: RotateCw },
         { label: 'Staff Workload', path: '/admin/workload', icon: Users },
         { label: 'Manage Users', path: '/admin/users', icon: UserCheck },
         { label: 'Reports & Export', path: '/admin/reports', icon: BarChart3 },
+        { label: 'Sent Outbox', path: '/admin/messages', icon: Mail },
+        { label: 'Campus Issues Board', path: '/issues', icon: Compass },
         { label: 'Campus Settings', path: '/admin/settings', icon: Settings }
       ];
     }

@@ -39,6 +39,9 @@ export function Navbar() {
 
           {/* Desktop Navigation Links */}
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600 dark:text-slate-300">
+            <Link to="/issues" className="text-blue-700 dark:text-blue-400 font-semibold hover:underline flex items-center gap-1">
+              Campus Issues Board
+            </Link>
             <a href="#how-it-works" className="hover:text-primary-700 dark:hover:text-primary-400 transition-colors">
               How It Works
             </a>
@@ -157,3 +160,4 @@ export function Navbar() {
 }
 
 export default Navbar;
+

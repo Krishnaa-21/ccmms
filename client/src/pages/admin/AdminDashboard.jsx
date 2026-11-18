@@ -116,6 +116,13 @@ export default function AdminDashboard() {
   });
   const auditLogs = auditRes?.data || [];
 
+  // 9. Phase 5: Predictive Facilities Insights
+  const { data: insightsRes, isLoading: loadingInsights } = useQuery({
+    queryKey: ['admin-predictive-insights'],
+    queryFn: () => adminApi.getPredictiveInsights()
+  });
+  const insightsList = insightsRes?.data || [];
+
   const formatHours = (hrs) => {
     if (!hrs && hrs !== 0) return 'N/A';
     if (hrs >= 24) return `${(hrs / 24).toFixed(1)}d`;
@@ -329,6 +336,94 @@ export default function AdminDashboard() {
                 </div>
               </div>
             ))}
+          </div>
+        )}
+      </div>
+
+      {/* Phase 5: Predictive Facilities Insights & Recommendations */}
+      <div className="p-5 rounded-2xl bg-gradient-to-r from-blue-500/10 via-indigo-500/5 to-transparent border border-blue-200 dark:border-blue-900/60 shadow-sm space-y-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div className="flex items-center gap-2 text-blue-900 dark:text-blue-200">
+            <Sparkles className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+            <div>
+              <h2 className="text-base font-bold font-serif">
+                Predictive Facilities Insights &amp; Preventive Interventions
+              </h2>
+              <p className="text-xs text-slate-500 dark:text-slate-400">
+                Rule-based algorithmic heuristics detecting recurring component wear, surge trends, and staff saturation
+              </p>
+            </div>
+          </div>
+          <Link
+            to="/admin/preventive"
+            className="text-xs font-semibold text-blue-700 dark:text-blue-400 hover:underline flex items-center gap-1 self-start sm:self-auto"
+          >
+            <span>Preventive scheduler</span>
+            <ChevronRight className="w-3.5 h-3.5" />
+          </Link>
+        </div>
+
+        {loadingInsights ? (
+          <div className="p-6 text-center text-xs text-slate-400">Evaluating facilities telemetry...</div>
+        ) : insightsList.length === 0 ? (
+          <div className="p-4 text-center text-xs text-slate-500 bg-white/60 dark:bg-slate-900/60 rounded-xl">
+            No anomalous equipment failure patterns detected this month.
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+            {insightsList.slice(0, 4).map((ins) => {
+              const isCrit = ins.severity === 'critical';
+              const isWarn = ins.severity === 'warning';
+              return (
+                <div
+                  key={ins.id}
+                  className="p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xs flex flex-col justify-between space-y-3"
+                >
+                  <div className="space-y-1.5">
+                    <div className="flex items-center justify-between gap-2">
+                      <span
+                        className={`px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider ${
+                          isCrit
+                            ? 'bg-rose-50 text-rose-700 dark:bg-rose-950/60 dark:text-rose-300 border border-rose-200 dark:border-rose-800'
+                            : isWarn
+                            ? 'bg-amber-50 text-amber-700 dark:bg-amber-950/60 dark:text-amber-300 border border-amber-200 dark:border-amber-800'
+                            : 'bg-blue-50 text-blue-700 dark:bg-blue-950/60 dark:text-blue-300 border border-blue-200 dark:border-blue-800'
+                        }`}
+                      >
+                        {ins.severity}
+                      </span>
+                      <span className="text-[10px] font-mono text-slate-400">{ins.metric}</span>
+                    </div>
+
+                    <h4 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white leading-snug">
+                      {ins.title}
+                    </h4>
+
+                    <p className="text-[11px] text-slate-500 leading-relaxed line-clamp-3">
+                      {ins.description}
+                    </p>
+                  </div>
+
+                  <div className="pt-2 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                    <button
+                      onClick={() => {
+                        if (ins.actionType === 'CREATE_PREVENTIVE') {
+                          navigate('/admin/preventive');
+                        } else if (ins.actionType === 'REBALANCE_STAFF') {
+                          navigate('/admin/workload');
+                        } else {
+                          navigate('/admin/preventive');
+                        }
+                      }}
+                      className="text-xs font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 flex items-center gap-1"
+                    >
+                      <span>{ins.recommendedAction}</span>
+                      <ArrowRight className="w-3 h-3" />
+                    </button>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         )}
       </div>
@@ -632,3 +727,4 @@ export default function AdminDashboard() {
     </div>
   );
 }
+
