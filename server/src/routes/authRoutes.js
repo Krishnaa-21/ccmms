@@ -27,3 +27,4 @@ router.get('/me', requireAuth, getMe);
 router.patch('/change-password', requireAuth, validateBody(changePasswordSchema), changePassword);
 
 export default router;
+

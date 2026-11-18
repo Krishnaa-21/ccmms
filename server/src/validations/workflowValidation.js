@@ -36,3 +36,4 @@ export const reopenSchema = z.object({
 export const closeSchema = z.object({
   notes: z.string().trim().optional()
 });
+

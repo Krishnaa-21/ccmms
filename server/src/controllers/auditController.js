@@ -13,3 +13,4 @@ export const getAuditLogs = asyncHandler(async (req, res) => {
 export default {
   getAuditLogs
 };
+

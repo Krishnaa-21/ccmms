@@ -22,3 +22,4 @@ router.patch('/categories/:id', requireAdmin, updateCategory);
 router.delete('/categories/:id', requireAdmin, deleteCategory);
 
 export default router;
+

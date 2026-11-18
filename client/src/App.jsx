@@ -1,0 +1,173 @@
+import React from 'react';
+import { BrowserRouter, Routes, Route, Navigate, Link } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { Toaster } from 'react-hot-toast';
+
+import { ThemeProvider } from './context/ThemeContext.jsx';
+import { AuthProvider, useAuth } from './context/AuthContext.jsx';
+import { NotificationProvider } from './context/NotificationContext.jsx';
+
+import { ProtectedRoute } from './components/common/ProtectedRoute.jsx';
+import StudentLayout from './components/layout/StudentLayout.jsx';
+
+// Public Pages
+import LandingPage from './pages/public/LandingPage.jsx';
+import LoginPage from './pages/public/LoginPage.jsx';
+import RegisterPage from './pages/public/RegisterPage.jsx';
+import ForgotPasswordPage from './pages/public/ForgotPasswordPage.jsx';
+
+// Student Pages
+import StudentDashboard from './pages/student/StudentDashboard.jsx';
+import NewComplaintPage from './pages/student/NewComplaintPage.jsx';
+import MyComplaintsPage from './pages/student/MyComplaintsPage.jsx';
+import ComplaintDetailPage from './pages/student/ComplaintDetailPage.jsx';
+import NotificationsPage from './pages/student/NotificationsPage.jsx';
+import ProfilePage from './pages/student/ProfilePage.jsx';
+import SettingsPage from './pages/student/SettingsPage.jsx';
+
+import { Button } from './components/ui/Button.jsx';
+import { Building2, ArrowLeft } from 'lucide-react';
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      refetchOnWindowFocus: false,
+      retry: 1,
+      staleTime: 1000 * 30 // 30 seconds
+    }
+  }
+});
+
+function NotFoundPage() {
+  return (
+    <div className="min-h-screen flex items-center justify-center p-6 bg-slate-50 dark:bg-slate-950">
+      <div className="text-center space-y-4 max-w-md">
+        <div className="w-16 h-16 rounded-2xl bg-primary-100 dark:bg-primary-950/60 text-primary-700 dark:text-primary-400 flex items-center justify-center mx-auto">
+          <Building2 className="w-8 h-8" />
+        </div>
+        <h1 className="text-3xl font-bold font-serif text-slate-900 dark:text-white">
+          404 - Page Not Found
+        </h1>
+        <p className="text-sm text-slate-600 dark:text-slate-400">
+          The campus maintenance page you requested could not be located or may have been moved.
+        </p>
+        <div className="pt-2">
+          <Link to="/">
+            <Button variant="primary" size="md">
+              <ArrowLeft className="w-4 h-4 mr-2" />
+              Back to Home
+            </Button>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Redirect logged-in users who land on public root or login
+function PublicRoute({ children }) {
+  const { isAuthenticated, user, isLoading } = useAuth();
+  if (isLoading) return null;
+  if (isAuthenticated && user) {
+    if (user.role === 'admin') return <Navigate to="/student/dashboard" replace />;
+    if (user.role === 'staff') return <Navigate to="/student/dashboard" replace />;
+    return <Navigate to="/student/dashboard" replace />;
+  }
+  return children;
+}
+
+export default function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider>
+        <AuthProvider>
+          <NotificationProvider>
+            <BrowserRouter>
+              <Routes>
+                {/* Public Website */}
+                <Route path="/" element={<LandingPage />} />
+                <Route
+                  path="/login"
+                  element={
+                    <PublicRoute>
+                      <LoginPage />
+                    </PublicRoute>
+                  }
+                />
+                <Route
+                  path="/register"
+                  element={
+                    <PublicRoute>
+                      <RegisterPage />
+                    </PublicRoute>
+                  }
+                />
+                <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+
+                {/* Student / Requester Portal */}
+                <Route
+                  path="/student"
+                  element={
+                    <ProtectedRoute>
+                      <StudentLayout />
+                    </ProtectedRoute>
+                  }
+                >
+                  <Route index element={<Navigate to="/student/dashboard" replace />} />
+                  <Route path="dashboard" element={<StudentDashboard />} />
+                  <Route path="new-complaint" element={<NewComplaintPage />} />
+                  <Route path="complaints" element={<MyComplaintsPage />} />
+                  <Route path="complaints/:id" element={<ComplaintDetailPage />} />
+                  <Route path="notifications" element={<NotificationsPage />} />
+                  <Route path="profile" element={<ProfilePage />} />
+                  <Route path="settings" element={<SettingsPage />} />
+                </Route>
+
+                {/* Compatibility Fallback for /admin and /staff until Phase 4 & 5 */}
+                <Route
+                  path="/admin/*"
+                  element={<Navigate to="/student/dashboard" replace />}
+                />
+                <Route
+                  path="/staff/*"
+                  element={<Navigate to="/student/dashboard" replace />}
+                />
+
+                {/* 404 Catch-All */}
+                <Route path="*" element={<NotFoundPage />} />
+              </Routes>
+            </BrowserRouter>
+
+            <Toaster
+              position="top-right"
+              toastOptions={{
+                duration: 4000,
+                style: {
+                  borderRadius: '1rem',
+                  background: '#0f172a',
+                  color: '#fff',
+                  fontSize: '0.875rem',
+                  fontFamily: 'Inter, system-ui, sans-serif',
+                  padding: '12px 18px',
+                  boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.25)'
+                },
+                success: {
+                  iconTheme: {
+                    primary: '#0d9488',
+                    secondary: '#fff'
+                  }
+                },
+                error: {
+                  iconTheme: {
+                    primary: '#f43f5e',
+                    secondary: '#fff'
+                  }
+                }
+              }}
+            />
+          </NotificationProvider>
+        </AuthProvider>
+      </ThemeProvider>
+    </QueryClientProvider>
+  );
+}

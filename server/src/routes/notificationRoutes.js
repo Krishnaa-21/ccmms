@@ -23,3 +23,4 @@ router.delete('/:id', deleteNotification);
 router.get('/sent-messages', requireAdmin, getSentMessages);
 
 export default router;
+

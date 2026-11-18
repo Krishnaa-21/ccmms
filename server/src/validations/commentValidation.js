@@ -28,3 +28,4 @@ export const updateSettingsSchema = z.object({
   autoAssignment: z.boolean().optional(),
   escalationEmail: z.string().trim().email().optional()
 });
+

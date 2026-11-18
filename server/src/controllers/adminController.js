@@ -24,3 +24,4 @@ export default {
   handleResetDemoData,
   triggerSlaScan
 };
+

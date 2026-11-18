@@ -3,51 +3,42 @@
 A centralized web platform for university campuses to submit, assign, track, resolve, and analyze maintenance complaints with automated workflows, SLA monitoring, and role-based portals.
 
 **Campus:** Apex Institute of Technology (Main Campus)  
-**Current Release:** **Phase 2 - Complete Working Backend**  
+**Current Release:** **Phase 3 - Public Website, Authentication & Student/Staff Experience**  
 **Storage Architecture:** ACID-inspired JSON File-Store with in-memory caching, atomic file writes (temp -> rename), and keyed mutex concurrency locks (Zero external DB server required).
 
 ---
 
 ## 🚀 Quick Start
 
-### 1. Installation
-Install dependencies across monorepo:
+### 1. Installation & Monorepo Setup
+Install all dependencies across monorepo (root, server, client):
 ```bash
-# Server dependencies
-cd server && npm install
-
-# Root concurrently
-cd .. && npm install
+npm run install:all
 ```
 
 ### 2. Environment Configuration
-Copy environment templates:
 ```bash
 cp server/.env.example server/.env
+cp client/.env.example client/.env
 ```
-
-Default environment parameters:
-- `PORT=5000`
-- `NODE_ENV=development`
-- `CAMPUS_ID=apex-campus-main`
-- `JWT_SECRET=ccmms_super_secret_jwt_key_2026_apex_campus`
-- `JWT_EXPIRES_IN=1d`
-- `REFRESH_TOKEN_SECRET=ccmms_super_secret_refresh_jwt_key_2026_apex_campus`
-- `REFRESH_TOKEN_EXPIRES_IN=7d`
 
 ### 3. Seed Realistic Campus Demo Data
 Populate all 10 collections (`users.json`, `categories.json`, `complaints.json`, `statusHistory.json`, `notifications.json`, `sentMessages.json`, `feedback.json`, `comments.json`, `settings.json`, `auditLog.json`):
 ```bash
 npm run seed
-# or
-npm --prefix server run seed
 ```
 
-### 4. Run the Backend Server
+### 4. Run the Full Stack Application
+Runs both Node.js Express backend (`http://localhost:5000`) and Vite React client (`http://localhost:5173`) concurrently:
 ```bash
-npm --prefix server start
-# or development with auto-reload:
-npm --prefix server run dev
+npm run dev
+```
+
+Visit the application in your browser:
+- **Public Portal & Landing Page:** [http://localhost:5173](http://localhost:5173)
+- **Student / Requester Dashboard:** [http://localhost:5173/student/dashboard](http://localhost:5173/student/dashboard)
+- **Backend Health & API Status:** [http://localhost:5000/api/health](http://localhost:5000/api/health)
+- **Interactive REST Documentation:** [http://localhost:5000/api/docs](http://localhost:5000/api/docs)
 ```
 
 - **Backend API Root**: `http://localhost:5000`

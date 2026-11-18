@@ -9,3 +9,4 @@ router.use(requireAuth);
 router.get('/', requireAdmin, getFeedbacks);
 
 export default router;
+

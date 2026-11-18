@@ -24,3 +24,4 @@ export const updateUserSchema = z.object({
 export const updateStatusSchema = z.object({
   isActive: z.boolean({ required_error: 'isActive boolean flag is required' })
 });
+

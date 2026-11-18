@@ -189,3 +189,4 @@ export const getApiDocs = (req, res) => {
 };
 
 export default { getApiDocs };
+

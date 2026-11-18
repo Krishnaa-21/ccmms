@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-surface-50: #f8fafc;
+    --color-surface-100: #f1f5f9;
+    --color-surface-200: #e2e8f0;
+    --color-surface-card: #ffffff;
+    --color-surface-elevated: #ffffff;
+    --color-border: #e2e8f0;
+    --color-border-subtle: #f1f5f9;
+
+    /* Semantic Status colors (Light) */
+    --status-submitted-bg: #f1f5f9;
+    --status-submitted-text: #475569;
+    --status-submitted-border: #cbd5e1;
+    --status-submitted-dot: #64748b;
+
+    --status-review-bg: #eff6ff;
+    --status-review-text: #1d4ed8;
+    --status-review-border: #bfdbfe;
+    --status-review-dot: #3b82f6;
+
+    --status-assigned-bg: #eef2ff;
+    --status-assigned-text: #4338ca;
+    --status-assigned-border: #c7d2fe;
+    --status-assigned-dot: #6366f1;
+
+    --status-progress-bg: #fffbeb;
+    --status-progress-text: #b45309;
+    --status-progress-border: #fde68a;
+    --status-progress-dot: #f59e0b;
+
+    --status-parts-bg: #fff7ed;
+    --status-parts-text: #c2410c;
+    --status-parts-border: #fed7aa;
+    --status-parts-dot: #f97316;
+
+    --status-resolved-bg: #f0fdf4;
+    --status-resolved-text: #15803d;
+    --status-resolved-border: #bbf7d0;
+    --status-resolved-dot: #22c55e;
+
+    --status-closed-bg: #f4f4f5;
+    --status-closed-text: #52525b;
+    --status-closed-border: #e4e4e7;
+    --status-closed-dot: #71717a;
+
+    --status-rejected-bg: #fef2f2;
+    --status-rejected-text: #b91c1c;
+    --status-rejected-border: #fecaca;
+    --status-rejected-dot: #ef4444;
+  }
+
+  .dark {
+    --color-surface-50: #0b1320;
+    --color-surface-100: #101c2e;
+    --color-surface-200: #1a2a40;
+    --color-surface-card: #132238;
+    --color-surface-elevated: #1a2d48;
+    --color-border: #233754;
+    --color-border-subtle: #1a2a40;
+
+    /* Semantic Status colors (Dark) */
+    --status-submitted-bg: rgba(71, 85, 105, 0.25);
+    --status-submitted-text: #cbd5e1;
+    --status-submitted-border: rgba(148, 163, 184, 0.3);
+    --status-submitted-dot: #94a3b8;
+
+    --status-review-bg: rgba(29, 78, 216, 0.25);
+    --status-review-text: #93c5fd;
+    --status-review-border: rgba(96, 165, 250, 0.35);
+    --status-review-dot: #60a5fa;
+
+    --status-assigned-bg: rgba(67, 56, 202, 0.25);
+    --status-assigned-text: #a5b4fc;
+    --status-assigned-border: rgba(129, 140, 248, 0.35);
+    --status-assigned-dot: #818cf8;
+
+    --status-progress-bg: rgba(180, 83, 9, 0.25);
+    --status-progress-text: #fcd34d;
+    --status-progress-border: rgba(251, 191, 36, 0.35);
+    --status-progress-dot: #fbbf24;
+
+    --status-parts-bg: rgba(194, 65, 12, 0.25);
+    --status-parts-text: #fdba74;
+    --status-parts-border: rgba(251, 146, 60, 0.35);
+    --status-parts-dot: #fb923c;
+
+    --status-resolved-bg: rgba(21, 128, 61, 0.25);
+    --status-resolved-text: #86efac;
+    --status-resolved-border: rgba(74, 222, 128, 0.35);
+    --status-resolved-dot: #4ade80;
+
+    --status-closed-bg: rgba(82, 82, 91, 0.25);
+    --status-closed-text: #d4d4d8;
+    --status-closed-border: rgba(161, 161, 170, 0.35);
+    --status-closed-dot: #a1a1aa;
+
+    --status-rejected-bg: rgba(185, 28, 28, 0.25);
+    --status-rejected-text: #fca5a5;
+    --status-rejected-border: rgba(248, 113, 113, 0.35);
+    --status-rejected-dot: #f87171;
+  }
+
+  body {
+    background-color: var(--color-surface-50);
+    color: #0f172a;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  .dark body {
+    color: #f1f5f9;
+  }
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

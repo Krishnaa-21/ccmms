@@ -28,3 +28,4 @@ router.patch('/:id/status', validateBody(updateStatusSchema), updateUserStatus);
 router.delete('/:id', deleteUser);
 
 export default router;
+

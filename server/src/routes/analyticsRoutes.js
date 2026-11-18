@@ -32,3 +32,4 @@ router.get('/staff-performance', requireAdmin, getStaffPerformance);
 router.get('/attention-needed', requireAdmin, getAttentionNeeded);
 
 export default router;
+

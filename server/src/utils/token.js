@@ -34,3 +34,4 @@ export function verifyAccessToken(token) {
 export function verifyRefreshToken(token) {
   return jwt.verify(token, ENV.REFRESH_TOKEN_SECRET);
 }
+

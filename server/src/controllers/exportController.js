@@ -24,3 +24,4 @@ export default {
   exportComplaintsCSV,
   exportAnalyticsPDF
 };
+

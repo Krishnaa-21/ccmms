@@ -10,3 +10,4 @@ router.post('/reset-demo-data', handleResetDemoData);
 router.post('/trigger-sla-scan', triggerSlaScan);
 
 export default router;
+

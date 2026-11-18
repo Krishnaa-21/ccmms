@@ -12,6 +12,8 @@ export async function requireAuth(req, res, next) {
       token = req.headers.authorization.split(' ')[1];
     } else if (req.cookies && req.cookies.accessToken) {
       token = req.cookies.accessToken;
+    } else if (req.query && req.query.token) {
+      token = req.query.token;
     }
 
     if (!token) {
@@ -99,3 +101,4 @@ export function canAccessComplaint(user, complaint) {
   if (user.role === 'student' && complaint.createdBy?.id === user.id) return true;
   return false;
 }
+

@@ -35,12 +35,12 @@
       "department": "Plumbing & Water Works",
       "specialty": "Plumbing"
     },
-    "createdAt": "2026-11-14T15:13:44.784Z",
-    "updatedAt": "2026-11-15T15:13:44.784Z",
-    "dueDate": "2026-11-14T19:13:44.784Z",
+    "createdAt": "2026-11-14T16:09:11.422Z",
+    "updatedAt": "2026-11-15T16:09:11.422Z",
+    "dueDate": "2026-11-14T20:09:11.422Z",
     "isOverdue": true,
     "escalationLevel": 1,
-    "escalatedAt": "2026-11-14T15:13:44.784Z",
+    "escalatedAt": "2026-11-14T16:09:11.422Z",
     "upvotesCount": 3,
     "upvotedBy": [
       "usr_stud_01",
@@ -61,7 +61,7 @@
         "size": "1.8 MB",
         "mimeType": "image/jpeg",
         "url": "/uploads/sample_plm.jpg",
-        "uploadedAt": "2026-11-14T15:13:44.784Z"
+        "uploadedAt": "2026-11-14T16:09:11.422Z"
       }
     ]
   },
@@ -101,12 +101,12 @@
       "department": "IT Infrastructure & Support",
       "specialty": "IT"
     },
-    "createdAt": "2026-11-15T15:13:44.784Z",
-    "updatedAt": "2026-11-16T15:13:44.784Z",
-    "dueDate": "2026-11-16T03:13:44.784Z",
+    "createdAt": "2026-11-15T16:09:11.422Z",
+    "updatedAt": "2026-11-16T16:09:11.422Z",
+    "dueDate": "2026-11-16T04:09:11.422Z",
     "isOverdue": true,
     "escalationLevel": 1,
-    "escalatedAt": "2026-11-15T15:13:44.784Z",
+    "escalatedAt": "2026-11-15T16:09:11.422Z",
     "upvotesCount": 2,
     "upvotedBy": [
       "usr_stud_01",
@@ -126,7 +126,7 @@
         "size": "1.8 MB",
         "mimeType": "image/jpeg",
         "url": "/uploads/sample_its.jpg",
-        "uploadedAt": "2026-11-15T15:13:44.784Z"
+        "uploadedAt": "2026-11-15T16:09:11.422Z"
       }
     ]
   },
@@ -166,12 +166,12 @@
       "department": "IT Infrastructure & Support",
       "specialty": "IT"
     },
-    "createdAt": "2026-11-16T15:13:44.784Z",
-    "updatedAt": "2026-11-17T15:13:44.784Z",
-    "dueDate": "2026-11-16T19:13:44.784Z",
+    "createdAt": "2026-11-16T16:09:11.422Z",
+    "updatedAt": "2026-11-17T16:09:11.422Z",
+    "dueDate": "2026-11-16T20:09:11.422Z",
     "isOverdue": true,
     "escalationLevel": 1,
-    "escalatedAt": "2026-11-16T15:13:44.784Z",
+    "escalatedAt": "2026-11-16T16:09:11.422Z",
     "upvotesCount": 0,
     "upvotedBy": [],
     "isDeleted": false,
@@ -212,12 +212,12 @@
       "department": "Faculty of Applied Sciences"
     },
     "assignedTo": null,
-    "createdAt": "2026-11-16T15:13:44.784Z",
-    "updatedAt": "2026-11-17T15:13:44.784Z",
-    "dueDate": "2026-11-16T17:13:44.784Z",
+    "createdAt": "2026-11-16T16:09:11.422Z",
+    "updatedAt": "2026-11-17T16:09:11.422Z",
+    "dueDate": "2026-11-16T18:09:11.422Z",
     "isOverdue": true,
     "escalationLevel": 1,
-    "escalatedAt": "2026-11-16T15:13:44.784Z",
+    "escalatedAt": "2026-11-16T16:09:11.422Z",
     "upvotesCount": 0,
     "upvotedBy": [],
     "isDeleted": false,
@@ -234,7 +234,7 @@
         "size": "1.8 MB",
         "mimeType": "image/jpeg",
         "url": "/uploads/sample_ele.jpg",
-        "uploadedAt": "2026-11-16T15:13:44.784Z"
+        "uploadedAt": "2026-11-16T16:09:11.422Z"
       }
     ]
   },
@@ -274,12 +274,12 @@
       "department": "Civil & Carpentry Maintenance",
       "specialty": "General"
     },
-    "createdAt": "2026-11-12T15:13:44.784Z",
-    "updatedAt": "2026-11-13T15:13:44.784Z",
-    "dueDate": "2026-11-13T15:13:44.784Z",
+    "createdAt": "2026-11-12T16:09:11.422Z",
+    "updatedAt": "2026-11-13T16:09:11.422Z",
+    "dueDate": "2026-11-13T16:09:11.422Z",
     "isOverdue": true,
     "escalationLevel": 1,
-    "escalatedAt": "2026-11-12T15:13:44.784Z",
+    "escalatedAt": "2026-11-12T16:09:11.422Z",
     "upvotesCount": 0,
     "upvotedBy": [],
     "isDeleted": false,
@@ -296,7 +296,7 @@
         "size": "1.8 MB",
         "mimeType": "image/jpeg",
         "url": "/uploads/sample_gen.jpg",
-        "uploadedAt": "2026-11-12T15:13:44.784Z"
+        "uploadedAt": "2026-11-12T16:09:11.422Z"
       }
     ]
   },
@@ -336,12 +336,12 @@
       "department": "Electrical & Power Services",
       "specialty": "Electrical"
     },
-    "createdAt": "2026-11-15T15:13:44.785Z",
-    "updatedAt": "2026-11-16T15:13:44.785Z",
-    "dueDate": "2026-11-15T17:13:44.785Z",
+    "createdAt": "2026-11-15T16:09:11.422Z",
+    "updatedAt": "2026-11-16T16:09:11.422Z",
+    "dueDate": "2026-11-15T18:09:11.422Z",
     "isOverdue": true,
     "escalationLevel": 1,
-    "escalatedAt": "2026-11-15T15:13:44.785Z",
+    "escalatedAt": "2026-11-15T16:09:11.422Z",
     "upvotesCount": 0,
     "upvotedBy": [],
     "isDeleted": false,
@@ -389,12 +389,12 @@
       "department": "Plumbing & Water Works",
       "specialty": "Plumbing"
     },
-    "createdAt": "2026-11-11T15:13:44.785Z",
-    "updatedAt": "2026-11-12T15:13:44.785Z",
-    "dueDate": "2026-11-12T15:13:44.785Z",
+    "createdAt": "2026-11-11T16:09:11.422Z",
+    "updatedAt": "2026-11-12T16:09:11.422Z",
+    "dueDate": "2026-11-12T16:09:11.422Z",
     "isOverdue": true,
     "escalationLevel": 1,
-    "escalatedAt": "2026-11-11T15:13:44.785Z",
+    "escalatedAt": "2026-11-11T16:09:11.422Z",
     "upvotesCount": 0,
     "upvotedBy": [],
     "isDeleted": false,
@@ -411,7 +411,7 @@
         "size": "1.8 MB",
         "mimeType": "image/jpeg",
         "url": "/uploads/sample_plm.jpg",
-        "uploadedAt": "2026-11-11T15:13:44.785Z"
+        "uploadedAt": "2026-11-11T16:09:11.422Z"
       }
     ]
   },
@@ -444,9 +444,9 @@
       "department": "Mechanical Engineering (B.Tech 4th Yr)"
     },
     "assignedTo": null,
-    "createdAt": "2026-11-18T13:13:44.785Z",
-    "updatedAt": "2026-11-18T15:13:44.785Z",
-    "dueDate": "2026-11-19T13:13:44.785Z",
+    "createdAt": "2026-11-18T14:09:11.422Z",
+    "updatedAt": "2026-11-18T16:09:11.422Z",
+    "dueDate": "2026-11-19T14:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -490,9 +490,9 @@
       "department": "Physics (M.Sc 1st Yr)"
     },
     "assignedTo": null,
-    "createdAt": "2026-11-18T11:13:44.785Z",
-    "updatedAt": "2026-11-18T15:13:44.785Z",
-    "dueDate": "2026-11-20T11:13:44.785Z",
+    "createdAt": "2026-11-18T12:09:11.422Z",
+    "updatedAt": "2026-11-18T16:09:11.422Z",
+    "dueDate": "2026-11-20T12:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -536,9 +536,9 @@
       "department": "Computer Systems Lab"
     },
     "assignedTo": null,
-    "createdAt": "2026-11-18T09:13:44.785Z",
-    "updatedAt": "2026-11-18T15:13:44.785Z",
-    "dueDate": "2026-11-18T21:13:44.785Z",
+    "createdAt": "2026-11-18T10:09:11.422Z",
+    "updatedAt": "2026-11-18T16:09:11.422Z",
+    "dueDate": "2026-11-18T22:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -582,9 +582,9 @@
       "department": "Faculty of Computer Science"
     },
     "assignedTo": null,
-    "createdAt": "2026-11-18T07:13:44.785Z",
-    "updatedAt": "2026-11-18T15:13:44.785Z",
-    "dueDate": "2026-11-20T07:13:44.785Z",
+    "createdAt": "2026-11-18T08:09:11.422Z",
+    "updatedAt": "2026-11-18T16:09:11.422Z",
+    "dueDate": "2026-11-20T08:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -604,7 +604,7 @@
         "size": "1.8 MB",
         "mimeType": "image/jpeg",
         "url": "/uploads/sample_gen.jpg",
-        "uploadedAt": "2026-11-18T07:13:44.785Z"
+        "uploadedAt": "2026-11-18T08:09:11.422Z"
       }
     ]
   },
@@ -637,9 +637,9 @@
       "department": "Faculty of Applied Sciences"
     },
     "assignedTo": null,
-    "createdAt": "2026-11-17T14:13:44.785Z",
-    "updatedAt": "2026-11-18T15:13:44.785Z",
-    "dueDate": "2026-11-19T14:13:44.785Z",
+    "createdAt": "2026-11-17T15:09:11.422Z",
+    "updatedAt": "2026-11-18T16:09:11.422Z",
+    "dueDate": "2026-11-19T15:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -683,9 +683,9 @@
       "department": "Central Library Services"
     },
     "assignedTo": null,
-    "createdAt": "2026-11-17T10:13:44.785Z",
-    "updatedAt": "2026-11-18T15:13:44.785Z",
-    "dueDate": "2026-11-18T10:13:44.785Z",
+    "createdAt": "2026-11-17T11:09:11.422Z",
+    "updatedAt": "2026-11-18T16:09:11.422Z",
+    "dueDate": "2026-11-18T11:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -705,7 +705,7 @@
         "size": "1.8 MB",
         "mimeType": "image/jpeg",
         "url": "/uploads/sample_gen.jpg",
-        "uploadedAt": "2026-11-17T10:13:44.785Z"
+        "uploadedAt": "2026-11-17T11:09:11.422Z"
       }
     ]
   },
@@ -738,9 +738,9 @@
       "department": "Computer Science (B.Tech 3rd Yr)"
     },
     "assignedTo": null,
-    "createdAt": "2026-11-17T06:13:44.785Z",
-    "updatedAt": "2026-11-18T15:13:44.785Z",
-    "dueDate": "2026-11-18T06:13:44.785Z",
+    "createdAt": "2026-11-17T07:09:11.422Z",
+    "updatedAt": "2026-11-18T16:09:11.422Z",
+    "dueDate": "2026-11-18T07:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -760,7 +760,7 @@
         "size": "1.8 MB",
         "mimeType": "image/jpeg",
         "url": "/uploads/sample_ele.jpg",
-        "uploadedAt": "2026-11-17T06:13:44.785Z"
+        "uploadedAt": "2026-11-17T07:09:11.422Z"
       }
     ]
   },
@@ -793,9 +793,9 @@
       "department": "Faculty of Computer Science"
     },
     "assignedTo": null,
-    "createdAt": "2026-11-18T14:13:44.786Z",
-    "updatedAt": "2026-11-18T15:13:44.786Z",
-    "dueDate": "2026-11-18T18:13:44.786Z",
+    "createdAt": "2026-11-18T15:09:11.422Z",
+    "updatedAt": "2026-11-18T16:09:11.422Z",
+    "dueDate": "2026-11-18T19:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -846,9 +846,9 @@
       "department": "Electrical & Power Services",
       "specialty": "Electrical"
     },
-    "createdAt": "2026-11-18T12:13:44.786Z",
-    "updatedAt": "2026-11-18T15:13:44.786Z",
-    "dueDate": "2026-11-18T14:13:44.786Z",
+    "createdAt": "2026-11-18T13:09:11.422Z",
+    "updatedAt": "2026-11-18T16:09:11.422Z",
+    "dueDate": "2026-11-18T15:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -868,7 +868,7 @@
         "size": "1.8 MB",
         "mimeType": "image/jpeg",
         "url": "/uploads/sample_ele.jpg",
-        "uploadedAt": "2026-11-18T12:13:44.786Z"
+        "uploadedAt": "2026-11-18T13:09:11.422Z"
       }
     ]
   },
@@ -908,9 +908,9 @@
       "department": "Civil & Carpentry Maintenance",
       "specialty": "General"
     },
-    "createdAt": "2026-11-17T09:13:44.786Z",
-    "updatedAt": "2026-11-18T15:13:44.786Z",
-    "dueDate": "2026-11-18T09:13:44.786Z",
+    "createdAt": "2026-11-17T10:09:11.422Z",
+    "updatedAt": "2026-11-18T16:09:11.422Z",
+    "dueDate": "2026-11-18T10:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -961,9 +961,9 @@
       "department": "IT Infrastructure & Support",
       "specialty": "IT"
     },
-    "createdAt": "2026-11-17T07:13:44.786Z",
-    "updatedAt": "2026-11-18T15:13:44.786Z",
-    "dueDate": "2026-11-18T07:13:44.786Z",
+    "createdAt": "2026-11-17T08:09:11.422Z",
+    "updatedAt": "2026-11-18T16:09:11.422Z",
+    "dueDate": "2026-11-18T08:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -983,7 +983,7 @@
         "size": "1.8 MB",
         "mimeType": "image/jpeg",
         "url": "/uploads/sample_its.jpg",
-        "uploadedAt": "2026-11-17T07:13:44.786Z"
+        "uploadedAt": "2026-11-17T08:09:11.422Z"
       }
     ]
   },
@@ -1023,9 +1023,9 @@
       "department": "Plumbing & Water Works",
       "specialty": "Plumbing"
     },
-    "createdAt": "2026-11-17T13:13:44.786Z",
-    "updatedAt": "2026-11-18T15:13:44.786Z",
-    "dueDate": "2026-11-17T17:13:44.786Z",
+    "createdAt": "2026-11-17T14:09:11.422Z",
+    "updatedAt": "2026-11-18T16:09:11.422Z",
+    "dueDate": "2026-11-17T18:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -1076,9 +1076,9 @@
       "department": "Electrical & Power Services",
       "specialty": "Electrical"
     },
-    "createdAt": "2026-11-17T08:13:44.786Z",
-    "updatedAt": "2026-11-18T15:13:44.786Z",
-    "dueDate": "2026-11-17T16:13:44.786Z",
+    "createdAt": "2026-11-17T09:09:11.422Z",
+    "updatedAt": "2026-11-18T16:09:11.422Z",
+    "dueDate": "2026-11-17T17:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -1129,9 +1129,9 @@
       "department": "Civil & Carpentry Maintenance",
       "specialty": "General"
     },
-    "createdAt": "2026-11-16T11:13:44.786Z",
-    "updatedAt": "2026-11-17T15:13:44.786Z",
-    "dueDate": "2026-11-17T11:13:44.786Z",
+    "createdAt": "2026-11-16T12:09:11.422Z",
+    "updatedAt": "2026-11-17T16:09:11.422Z",
+    "dueDate": "2026-11-17T12:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -1151,7 +1151,7 @@
         "size": "1.8 MB",
         "mimeType": "image/jpeg",
         "url": "/uploads/sample_gen.jpg",
-        "uploadedAt": "2026-11-16T11:13:44.786Z"
+        "uploadedAt": "2026-11-16T12:09:11.422Z"
       }
     ]
   },
@@ -1191,9 +1191,9 @@
       "department": "IT Infrastructure & Support",
       "specialty": "IT"
     },
-    "createdAt": "2026-11-17T03:13:44.786Z",
-    "updatedAt": "2026-11-18T15:13:44.786Z",
-    "dueDate": "2026-11-18T03:13:44.786Z",
+    "createdAt": "2026-11-17T04:09:11.422Z",
+    "updatedAt": "2026-11-18T16:09:11.422Z",
+    "dueDate": "2026-11-18T04:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -1244,9 +1244,9 @@
       "department": "Electrical & Power Services",
       "specialty": "Electrical"
     },
-    "createdAt": "2026-11-13T15:13:44.786Z",
-    "updatedAt": "2026-11-14T15:13:44.786Z",
-    "dueDate": "2026-11-18T15:13:44.786Z",
+    "createdAt": "2026-11-13T16:09:11.422Z",
+    "updatedAt": "2026-11-14T16:09:11.422Z",
+    "dueDate": "2026-11-18T16:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -1266,7 +1266,7 @@
         "size": "1.8 MB",
         "mimeType": "image/jpeg",
         "url": "/uploads/sample_ele.jpg",
-        "uploadedAt": "2026-11-13T15:13:44.786Z"
+        "uploadedAt": "2026-11-13T16:09:11.422Z"
       }
     ]
   },
@@ -1306,9 +1306,9 @@
       "department": "Plumbing & Water Works",
       "specialty": "Plumbing"
     },
-    "createdAt": "2026-11-14T15:13:44.786Z",
-    "updatedAt": "2026-11-15T15:13:44.786Z",
-    "dueDate": "2026-11-18T15:13:44.786Z",
+    "createdAt": "2026-11-14T16:09:11.422Z",
+    "updatedAt": "2026-11-15T16:09:11.422Z",
+    "dueDate": "2026-11-18T16:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -1359,9 +1359,9 @@
       "department": "Plumbing & Water Works",
       "specialty": "Plumbing"
     },
-    "createdAt": "2026-11-10T15:13:44.786Z",
-    "updatedAt": "2026-11-11T15:13:44.786Z",
-    "dueDate": "2026-11-11T03:13:44.786Z",
+    "createdAt": "2026-11-10T16:09:11.422Z",
+    "updatedAt": "2026-11-11T16:09:11.422Z",
+    "dueDate": "2026-11-11T04:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -1369,7 +1369,7 @@
     "upvotedBy": [],
     "isDeleted": false,
     "slaHours": 12,
-    "resolvedAt": "2026-11-16T15:13:44.786Z",
+    "resolvedAt": "2026-11-16T16:09:11.422Z",
     "closedAt": null,
     "resolutionNotes": "Replaced defective brass spindle and ceramic disc cartridge. Tested under full pressure for 15 minutes without leaks.",
     "rejectionReason": null,
@@ -1381,7 +1381,7 @@
         "size": "1.8 MB",
         "mimeType": "image/jpeg",
         "url": "/uploads/sample_plm.jpg",
-        "uploadedAt": "2026-11-10T15:13:44.786Z"
+        "uploadedAt": "2026-11-10T16:09:11.422Z"
       }
     ]
   },
@@ -1421,9 +1421,9 @@
       "department": "Electrical & Power Services",
       "specialty": "Electrical"
     },
-    "createdAt": "2026-11-08T15:13:44.786Z",
-    "updatedAt": "2026-11-09T15:13:44.786Z",
-    "dueDate": "2026-11-08T17:13:44.786Z",
+    "createdAt": "2026-11-08T16:09:11.422Z",
+    "updatedAt": "2026-11-09T16:09:11.422Z",
+    "dueDate": "2026-11-08T18:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -1431,7 +1431,7 @@
     "upvotedBy": [],
     "isDeleted": false,
     "slaHours": 2,
-    "resolvedAt": "2026-11-15T15:13:44.786Z",
+    "resolvedAt": "2026-11-15T16:09:11.422Z",
     "closedAt": null,
     "resolutionNotes": "Replaced burnt Anchor modular 16A socket and refitted wire terminals with fire-retardant heat shrink sleeves.",
     "rejectionReason": null,
@@ -1443,7 +1443,7 @@
         "size": "1.8 MB",
         "mimeType": "image/jpeg",
         "url": "/uploads/sample_ele.jpg",
-        "uploadedAt": "2026-11-08T15:13:44.786Z"
+        "uploadedAt": "2026-11-08T16:09:11.422Z"
       }
     ]
   },
@@ -1483,9 +1483,9 @@
       "department": "IT Infrastructure & Support",
       "specialty": "IT"
     },
-    "createdAt": "2026-11-06T15:13:44.786Z",
-    "updatedAt": "2026-11-07T15:13:44.786Z",
-    "dueDate": "2026-11-07T03:13:44.786Z",
+    "createdAt": "2026-11-06T16:09:11.422Z",
+    "updatedAt": "2026-11-07T16:09:11.422Z",
+    "dueDate": "2026-11-07T04:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -1493,7 +1493,7 @@
     "upvotedBy": [],
     "isDeleted": false,
     "slaHours": 12,
-    "resolvedAt": "2026-11-13T15:13:44.786Z",
+    "resolvedAt": "2026-11-13T16:09:11.422Z",
     "closedAt": null,
     "resolutionNotes": "Ran MemTest86 diagnostic. Faulty 8GB DDR4 stick identified and replaced from lab spares inventory. Machine restored to active pool.",
     "rejectionReason": null,
@@ -1536,9 +1536,9 @@
       "department": "Civil & Carpentry Maintenance",
       "specialty": "General"
     },
-    "createdAt": "2026-11-04T15:13:44.786Z",
-    "updatedAt": "2026-11-05T15:13:44.786Z",
-    "dueDate": "2026-11-06T15:13:44.786Z",
+    "createdAt": "2026-11-04T16:09:11.422Z",
+    "updatedAt": "2026-11-05T16:09:11.422Z",
+    "dueDate": "2026-11-06T16:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -1546,7 +1546,7 @@
     "upvotedBy": [],
     "isDeleted": false,
     "slaHours": 48,
-    "resolvedAt": "2026-11-12T15:13:44.786Z",
+    "resolvedAt": "2026-11-12T16:09:11.422Z",
     "closedAt": null,
     "resolutionNotes": "Chiseled wood recess, installed 5-inch heavy duty stainless steel ball-bearing hinges with 2.5-inch hardened steel screws.",
     "rejectionReason": null,
@@ -1558,7 +1558,7 @@
         "size": "1.8 MB",
         "mimeType": "image/jpeg",
         "url": "/uploads/sample_gen.jpg",
-        "uploadedAt": "2026-11-04T15:13:44.786Z"
+        "uploadedAt": "2026-11-04T16:09:11.422Z"
       }
     ]
   },
@@ -1598,9 +1598,9 @@
       "department": "Plumbing & Water Works",
       "specialty": "Plumbing"
     },
-    "createdAt": "2026-11-03T15:13:44.786Z",
-    "updatedAt": "2026-11-04T15:13:44.786Z",
-    "dueDate": "2026-11-03T19:13:44.786Z",
+    "createdAt": "2026-11-03T16:09:11.422Z",
+    "updatedAt": "2026-11-04T16:09:11.422Z",
+    "dueDate": "2026-11-03T20:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -1608,7 +1608,7 @@
     "upvotedBy": [],
     "isDeleted": false,
     "slaHours": 4,
-    "resolvedAt": "2026-11-11T15:13:44.786Z",
+    "resolvedAt": "2026-11-11T16:09:11.422Z",
     "closedAt": null,
     "resolutionNotes": "Deployed manual rotary snake auger and industrial chemical degreaser. Cleared 15 feet of 4-inch PVC waste line.",
     "rejectionReason": null,
@@ -1620,7 +1620,7 @@
         "size": "1.8 MB",
         "mimeType": "image/jpeg",
         "url": "/uploads/sample_plm.jpg",
-        "uploadedAt": "2026-11-03T15:13:44.786Z"
+        "uploadedAt": "2026-11-03T16:09:11.422Z"
       }
     ]
   },
@@ -1660,9 +1660,9 @@
       "department": "Electrical & Power Services",
       "specialty": "Electrical"
     },
-    "createdAt": "2026-10-31T15:13:44.786Z",
-    "updatedAt": "2026-11-01T15:13:44.786Z",
-    "dueDate": "2026-11-02T15:13:44.786Z",
+    "createdAt": "2026-10-31T16:09:11.422Z",
+    "updatedAt": "2026-11-01T16:09:11.422Z",
+    "dueDate": "2026-11-02T16:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -1670,7 +1670,7 @@
     "upvotedBy": [],
     "isDeleted": false,
     "slaHours": 48,
-    "resolvedAt": "2026-11-10T15:13:44.786Z",
+    "resolvedAt": "2026-11-10T16:09:11.422Z",
     "closedAt": null,
     "resolutionNotes": "Replaced 4 electronic ballasts and installed energy-efficient 20W LED batten fittings in place of T8 fluorescent tubes.",
     "rejectionReason": null,
@@ -1713,9 +1713,9 @@
       "department": "Civil & Carpentry Maintenance",
       "specialty": "General"
     },
-    "createdAt": "2026-10-29T15:13:44.786Z",
-    "updatedAt": "2026-10-30T15:13:44.786Z",
-    "dueDate": "2026-10-31T15:13:44.786Z",
+    "createdAt": "2026-10-29T16:09:11.422Z",
+    "updatedAt": "2026-10-30T16:09:11.422Z",
+    "dueDate": "2026-10-31T16:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -1723,7 +1723,7 @@
     "upvotedBy": [],
     "isDeleted": false,
     "slaHours": 48,
-    "resolvedAt": "2026-11-08T15:13:44.786Z",
+    "resolvedAt": "2026-11-08T16:09:11.422Z",
     "closedAt": null,
     "resolutionNotes": "Tapped new M12 threads into cast iron leg mounts and installed vibration-dampening rubber-padded leveling feet.",
     "rejectionReason": null,
@@ -1735,7 +1735,7 @@
         "size": "1.8 MB",
         "mimeType": "image/jpeg",
         "url": "/uploads/sample_gen.jpg",
-        "uploadedAt": "2026-10-29T15:13:44.786Z"
+        "uploadedAt": "2026-10-29T16:09:11.422Z"
       }
     ]
   },
@@ -1775,9 +1775,9 @@
       "department": "IT Infrastructure & Support",
       "specialty": "IT"
     },
-    "createdAt": "2026-10-27T15:13:44.786Z",
-    "updatedAt": "2026-10-28T15:13:44.786Z",
-    "dueDate": "2026-10-28T15:13:44.786Z",
+    "createdAt": "2026-10-27T16:09:11.422Z",
+    "updatedAt": "2026-10-28T16:09:11.422Z",
+    "dueDate": "2026-10-28T16:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -1785,7 +1785,7 @@
     "upvotedBy": [],
     "isDeleted": false,
     "slaHours": 24,
-    "resolvedAt": "2026-11-06T15:13:44.786Z",
+    "resolvedAt": "2026-11-06T16:09:11.422Z",
     "closedAt": null,
     "resolutionNotes": "Installed genuine Kyocera MK-1150 maintenance kit and recalibrated toner sensor.",
     "rejectionReason": null,
@@ -1828,9 +1828,9 @@
       "department": "Plumbing & Water Works",
       "specialty": "Plumbing"
     },
-    "createdAt": "2026-10-24T15:13:44.786Z",
-    "updatedAt": "2026-10-25T15:13:44.786Z",
-    "dueDate": "2026-10-26T15:13:44.786Z",
+    "createdAt": "2026-10-24T16:09:11.422Z",
+    "updatedAt": "2026-10-25T16:09:11.422Z",
+    "dueDate": "2026-10-26T16:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -1838,7 +1838,7 @@
     "upvotedBy": [],
     "isDeleted": false,
     "slaHours": 48,
-    "resolvedAt": "2026-11-04T15:13:44.786Z",
+    "resolvedAt": "2026-11-04T16:09:11.422Z",
     "closedAt": null,
     "resolutionNotes": "Removed stripped Teflon tape, wrapped with Loctite 55 pipe sealing cord and tightened with pipe wrench.",
     "rejectionReason": null,
@@ -1881,9 +1881,9 @@
       "department": "Civil & Carpentry Maintenance",
       "specialty": "General"
     },
-    "createdAt": "2026-10-04T15:13:44.786Z",
-    "updatedAt": "2026-10-05T15:13:44.786Z",
-    "dueDate": "2026-10-04T21:13:44.786Z",
+    "createdAt": "2026-10-04T16:09:11.422Z",
+    "updatedAt": "2026-10-05T16:09:11.422Z",
+    "dueDate": "2026-10-04T22:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -1891,8 +1891,8 @@
     "upvotedBy": [],
     "isDeleted": false,
     "slaHours": 6,
-    "resolvedAt": "2026-10-09T15:13:44.786Z",
-    "closedAt": "2026-10-11T15:13:44.786Z",
+    "resolvedAt": "2026-10-09T16:09:11.422Z",
+    "closedAt": "2026-10-11T16:09:11.422Z",
     "resolutionNotes": "Replaced broken glass with 6mm toughened safety glass and re-beaded frame with weather-resistant silicone.",
     "rejectionReason": null,
     "estimatedCost": 1850,
@@ -1903,7 +1903,7 @@
         "size": "1.8 MB",
         "mimeType": "image/jpeg",
         "url": "/uploads/sample_gen.jpg",
-        "uploadedAt": "2026-10-04T15:13:44.786Z"
+        "uploadedAt": "2026-10-04T16:09:11.422Z"
       }
     ]
   },
@@ -1943,9 +1943,9 @@
       "department": "Electrical & Power Services",
       "specialty": "Electrical"
     },
-    "createdAt": "2026-09-29T15:13:44.787Z",
-    "updatedAt": "2026-09-30T15:13:44.787Z",
-    "dueDate": "2026-09-29T23:13:44.787Z",
+    "createdAt": "2026-09-29T16:09:11.422Z",
+    "updatedAt": "2026-09-30T16:09:11.422Z",
+    "dueDate": "2026-09-30T00:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -1953,8 +1953,8 @@
     "upvotedBy": [],
     "isDeleted": false,
     "slaHours": 8,
-    "resolvedAt": "2026-10-03T15:13:44.787Z",
-    "closedAt": "2026-10-05T15:13:44.787Z",
+    "resolvedAt": "2026-10-03T16:09:11.422Z",
+    "closedAt": "2026-10-05T16:09:11.422Z",
     "resolutionNotes": "Replaced faulty PT100 temperature RTD sensor on return air duct and recalibrated Honeywell DDC controller.",
     "rejectionReason": null,
     "estimatedCost": 2400,
@@ -1965,7 +1965,7 @@
         "size": "1.8 MB",
         "mimeType": "image/jpeg",
         "url": "/uploads/sample_ele.jpg",
-        "uploadedAt": "2026-09-29T15:13:44.787Z"
+        "uploadedAt": "2026-09-29T16:09:11.422Z"
       }
     ]
   },
@@ -2005,9 +2005,9 @@
       "department": "IT Infrastructure & Support",
       "specialty": "IT"
     },
-    "createdAt": "2026-09-19T15:13:44.787Z",
-    "updatedAt": "2026-09-20T15:13:44.787Z",
-    "dueDate": "2026-09-19T19:13:44.787Z",
+    "createdAt": "2026-09-19T16:09:11.422Z",
+    "updatedAt": "2026-09-20T16:09:11.422Z",
+    "dueDate": "2026-09-19T20:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -2015,8 +2015,8 @@
     "upvotedBy": [],
     "isDeleted": false,
     "slaHours": 4,
-    "resolvedAt": "2026-09-20T15:13:44.787Z",
-    "closedAt": "2026-09-22T15:13:44.787Z",
+    "resolvedAt": "2026-09-20T16:09:11.422Z",
+    "closedAt": "2026-09-22T16:09:11.422Z",
     "resolutionNotes": "Hot-swapped failed Finisar 10G-LR transceiver and cleaned LC fiber patch connectors with click-cleaner.",
     "rejectionReason": null,
     "estimatedCost": 3200,
@@ -2027,7 +2027,7 @@
         "size": "1.8 MB",
         "mimeType": "image/jpeg",
         "url": "/uploads/sample_its.jpg",
-        "uploadedAt": "2026-09-19T15:13:44.787Z"
+        "uploadedAt": "2026-09-19T16:09:11.422Z"
       }
     ]
   },
@@ -2067,9 +2067,9 @@
       "department": "Plumbing & Water Works",
       "specialty": "Plumbing"
     },
-    "createdAt": "2026-09-09T15:13:44.787Z",
-    "updatedAt": "2026-09-10T15:13:44.787Z",
-    "dueDate": "2026-09-09T19:13:44.787Z",
+    "createdAt": "2026-09-09T16:09:11.422Z",
+    "updatedAt": "2026-09-10T16:09:11.422Z",
+    "dueDate": "2026-09-09T20:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -2077,8 +2077,8 @@
     "upvotedBy": [],
     "isDeleted": false,
     "slaHours": 4,
-    "resolvedAt": "2026-09-11T15:13:44.787Z",
-    "closedAt": "2026-09-14T15:13:44.787Z",
+    "resolvedAt": "2026-09-11T16:09:11.422Z",
+    "closedAt": "2026-09-14T16:09:11.422Z",
     "resolutionNotes": "Hired municipal jetting vacuum tanker truck. Jet pressure rodded 40 meters of pipe and cleared root ball.",
     "rejectionReason": null,
     "estimatedCost": 6500,
@@ -2089,7 +2089,7 @@
         "size": "1.8 MB",
         "mimeType": "image/jpeg",
         "url": "/uploads/sample_plm.jpg",
-        "uploadedAt": "2026-09-09T15:13:44.787Z"
+        "uploadedAt": "2026-09-09T16:09:11.422Z"
       }
     ]
   },
@@ -2129,9 +2129,9 @@
       "department": "Electrical & Power Services",
       "specialty": "Electrical"
     },
-    "createdAt": "2026-08-30T15:13:44.787Z",
-    "updatedAt": "2026-08-31T15:13:44.787Z",
-    "dueDate": "2026-09-01T15:13:44.787Z",
+    "createdAt": "2026-08-30T16:09:11.422Z",
+    "updatedAt": "2026-08-31T16:09:11.422Z",
+    "dueDate": "2026-09-01T16:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -2139,8 +2139,8 @@
     "upvotedBy": [],
     "isDeleted": false,
     "slaHours": 48,
-    "resolvedAt": "2026-09-04T15:13:44.787Z",
-    "closedAt": "2026-09-07T15:13:44.787Z",
+    "resolvedAt": "2026-09-04T16:09:11.422Z",
+    "closedAt": "2026-09-07T16:09:11.422Z",
     "resolutionNotes": "Installed new 50W LED high bay luminaires offering 500 lux illumination.",
     "rejectionReason": null,
     "estimatedCost": 2100,
@@ -2175,9 +2175,9 @@
       "department": "Computer Science (B.Tech 3rd Yr)"
     },
     "assignedTo": null,
-    "createdAt": "2026-10-29T15:13:44.787Z",
-    "updatedAt": "2026-10-30T15:13:44.787Z",
-    "dueDate": "2026-10-31T15:13:44.787Z",
+    "createdAt": "2026-10-29T16:09:11.422Z",
+    "updatedAt": "2026-10-30T16:09:11.422Z",
+    "dueDate": "2026-10-31T16:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -2221,9 +2221,9 @@
       "department": "Physics (M.Sc 1st Yr)"
     },
     "assignedTo": null,
-    "createdAt": "2026-10-19T15:13:44.787Z",
-    "updatedAt": "2026-10-20T15:13:44.787Z",
-    "dueDate": "2026-10-21T15:13:44.787Z",
+    "createdAt": "2026-10-19T16:09:11.422Z",
+    "updatedAt": "2026-10-20T16:09:11.422Z",
+    "dueDate": "2026-10-21T16:09:11.422Z",
     "isOverdue": false,
     "escalationLevel": 0,
     "escalatedAt": null,
@@ -2237,113 +2237,5 @@
     "rejectionReason": "Campus IT services exclusively support institute-owned hardware and infrastructure. Personal electronics repairs are not covered under campus maintenance policy.",
     "estimatedCost": 0,
     "attachments": []
-  },
-  {
-    "id": "rec_1795014825554_3thl6",
-    "campusId": "apex-campus-main",
-    "createdAt": "2026-11-18T15:13:45.551Z",
-    "trackingNumber": "CMP-2026-041",
-    "referenceNumber": "CCM-2026-0041",
-    "title": "Water leakage in Hostel Block A ground floor washroom",
-    "description": "Severe water dripping from flush pipe under sink 2",
-    "categoryId": "cat_plumbing",
-    "categoryName": "Plumbing",
-    "categoryColor": "#0284c7",
-    "categoryIcon": "Droplets",
-    "subCategory": "Leakage",
-    "priority": "High",
-    "status": "Assigned",
-    "location": {
-      "building": "Hostel Block A",
-      "floor": "Ground Floor",
-      "room": "Washroom Ground Floor",
-      "landmark": ""
-    },
-    "contactPreference": "Phone",
-    "createdBy": {
-      "id": "usr_stud_01",
-      "name": "Aarav Patel",
-      "email": "aarav.cse@apex.edu",
-      "role": "student",
-      "department": "Computer Science (B.Tech 3rd Yr)"
-    },
-    "assignedTo": {
-      "id": "usr_staff_plumb",
-      "name": "Rajesh Sharma",
-      "email": "plumbing@apex.edu",
-      "role": "staff",
-      "department": "Plumbing & Water Works",
-      "specialty": "Plumbing"
-    },
-    "updatedAt": "2026-11-18T15:13:45.674Z",
-    "dueDate": "2026-11-19T03:13:45.551Z",
-    "isOverdue": false,
-    "escalationLevel": 0,
-    "escalatedAt": null,
-    "upvotesCount": 1,
-    "upvotedBy": [
-      "usr_stud_01"
-    ],
-    "isDeleted": false,
-    "slaHours": 12,
-    "estimatedCost": 0,
-    "resolutionNotes": null,
-    "rejectionReason": null,
-    "attachments": []
-  },
-  {
-    "id": "rec_1795014863963_pajrs",
-    "campusId": "apex-campus-main",
-    "createdAt": "2026-11-18T15:14:23.961Z",
-    "trackingNumber": "CMP-2026-042",
-    "referenceNumber": "CCM-2026-0042",
-    "title": "Burst pipe flooding washroom corridor",
-    "description": "High pressure water gushing out from 2-inch galvanized pipe in Hostel Block B.",
-    "categoryId": "cat_plumbing",
-    "categoryName": "Plumbing",
-    "categoryColor": "#0284c7",
-    "categoryIcon": "Droplets",
-    "subCategory": "Leakage",
-    "priority": "Urgent",
-    "status": "Resolved",
-    "location": {
-      "building": "Hostel Block B",
-      "floor": "2nd Floor",
-      "room": "Washroom 2B",
-      "landmark": ""
-    },
-    "contactPreference": "Phone",
-    "createdBy": {
-      "id": "usr_stud_01",
-      "name": "Aarav Patel",
-      "email": "aarav.cse@apex.edu",
-      "role": "student",
-      "department": "Computer Science (B.Tech 3rd Yr)"
-    },
-    "assignedTo": {
-      "id": "usr_staff_plumb",
-      "name": "Rajesh Sharma",
-      "email": "plumbing@apex.edu",
-      "role": "staff",
-      "department": "Plumbing & Water Works",
-      "specialty": "Plumbing"
-    },
-    "updatedAt": "2026-11-18T15:14:24.081Z",
-    "dueDate": "2026-11-18T19:14:23.961Z",
-    "isOverdue": false,
-    "escalationLevel": 0,
-    "escalatedAt": null,
-    "upvotesCount": 1,
-    "upvotedBy": [
-      "usr_admin_01"
-    ],
-    "isDeleted": false,
-    "slaHours": 4,
-    "estimatedCost": 450,
-    "resolutionNotes": "Replaced burst section with 2-inch CPVC high-pressure piping. Flushed and tested for 30 minutes.",
-    "rejectionReason": null,
-    "attachments": [],
-    "resolvedAt": "2026-11-18T15:14:24.080Z",
-    "partsReplaced": "2-inch CPVC union and pipe"
   }
 ]

@@ -11,7 +11,7 @@
     "avatarColor": "#1e3a8a",
     "isActive": true,
     "createdAt": "2024-01-01T08:00:00.000Z",
-    "password": "$2a$10$6mh8Qts6KAWhgYlcYztZPeoQLPH1.6MdRBai1q88QKe3Mqbv23d4S"
+    "password": "$2a$10$mz8GDa67MPEelZOxfPxyU.kH2w.acW8JujsFRv50HVRD2x1dnmEY2"
   },
   {
     "id": "usr_staff_plumb",
@@ -26,7 +26,7 @@
     "avatarColor": "#0284c7",
     "isActive": true,
     "createdAt": "2024-01-05T08:30:00.000Z",
-    "password": "$2a$10$6mh8Qts6KAWhgYlcYztZPeoQLPH1.6MdRBai1q88QKe3Mqbv23d4S"
+    "password": "$2a$10$mz8GDa67MPEelZOxfPxyU.kH2w.acW8JujsFRv50HVRD2x1dnmEY2"
   },
   {
     "id": "usr_staff_elec",
@@ -41,7 +41,7 @@
     "avatarColor": "#d97706",
     "isActive": true,
     "createdAt": "2024-01-05T08:30:00.000Z",
-    "password": "$2a$10$6mh8Qts6KAWhgYlcYztZPeoQLPH1.6MdRBai1q88QKe3Mqbv23d4S"
+    "password": "$2a$10$mz8GDa67MPEelZOxfPxyU.kH2w.acW8JujsFRv50HVRD2x1dnmEY2"
   },
   {
     "id": "usr_staff_it",
@@ -56,7 +56,7 @@
     "avatarColor": "#7c3aed",
     "isActive": true,
     "createdAt": "2024-01-06T09:00:00.000Z",
-    "password": "$2a$10$6mh8Qts6KAWhgYlcYztZPeoQLPH1.6MdRBai1q88QKe3Mqbv23d4S"
+    "password": "$2a$10$mz8GDa67MPEelZOxfPxyU.kH2w.acW8JujsFRv50HVRD2x1dnmEY2"
   },
   {
     "id": "usr_staff_gen",
@@ -71,7 +71,7 @@
     "avatarColor": "#059669",
     "isActive": true,
     "createdAt": "2024-01-06T09:00:00.000Z",
-    "password": "$2a$10$6mh8Qts6KAWhgYlcYztZPeoQLPH1.6MdRBai1q88QKe3Mqbv23d4S"
+    "password": "$2a$10$mz8GDa67MPEelZOxfPxyU.kH2w.acW8JujsFRv50HVRD2x1dnmEY2"
   },
   {
     "id": "usr_stud_01",
@@ -85,7 +85,7 @@
     "avatarColor": "#2563eb",
     "isActive": true,
     "createdAt": "2024-01-10T10:00:00.000Z",
-    "password": "$2a$10$6mh8Qts6KAWhgYlcYztZPeoQLPH1.6MdRBai1q88QKe3Mqbv23d4S"
+    "password": "$2a$10$mz8GDa67MPEelZOxfPxyU.kH2w.acW8JujsFRv50HVRD2x1dnmEY2"
   },
   {
     "id": "usr_stud_02",
@@ -99,7 +99,7 @@
     "avatarColor": "#db2777",
     "isActive": true,
     "createdAt": "2024-01-10T10:15:00.000Z",
-    "password": "$2a$10$6mh8Qts6KAWhgYlcYztZPeoQLPH1.6MdRBai1q88QKe3Mqbv23d4S"
+    "password": "$2a$10$mz8GDa67MPEelZOxfPxyU.kH2w.acW8JujsFRv50HVRD2x1dnmEY2"
   },
   {
     "id": "usr_stud_03",
@@ -113,7 +113,7 @@
     "avatarColor": "#ea580c",
     "isActive": true,
     "createdAt": "2024-01-11T11:00:00.000Z",
-    "password": "$2a$10$6mh8Qts6KAWhgYlcYztZPeoQLPH1.6MdRBai1q88QKe3Mqbv23d4S"
+    "password": "$2a$10$mz8GDa67MPEelZOxfPxyU.kH2w.acW8JujsFRv50HVRD2x1dnmEY2"
   },
   {
     "id": "usr_stud_04",
@@ -127,7 +127,7 @@
     "avatarColor": "#9333ea",
     "isActive": true,
     "createdAt": "2024-01-12T09:30:00.000Z",
-    "password": "$2a$10$6mh8Qts6KAWhgYlcYztZPeoQLPH1.6MdRBai1q88QKe3Mqbv23d4S"
+    "password": "$2a$10$mz8GDa67MPEelZOxfPxyU.kH2w.acW8JujsFRv50HVRD2x1dnmEY2"
   },
   {
     "id": "usr_fac_01",
@@ -141,7 +141,7 @@
     "avatarColor": "#0891b2",
     "isActive": true,
     "createdAt": "2024-01-08T09:00:00.000Z",
-    "password": "$2a$10$6mh8Qts6KAWhgYlcYztZPeoQLPH1.6MdRBai1q88QKe3Mqbv23d4S"
+    "password": "$2a$10$mz8GDa67MPEelZOxfPxyU.kH2w.acW8JujsFRv50HVRD2x1dnmEY2"
   },
   {
     "id": "usr_fac_02",
@@ -155,7 +155,7 @@
     "avatarColor": "#4f46e5",
     "isActive": true,
     "createdAt": "2024-01-08T09:30:00.000Z",
-    "password": "$2a$10$6mh8Qts6KAWhgYlcYztZPeoQLPH1.6MdRBai1q88QKe3Mqbv23d4S"
+    "password": "$2a$10$mz8GDa67MPEelZOxfPxyU.kH2w.acW8JujsFRv50HVRD2x1dnmEY2"
   },
   {
     "id": "usr_staff_lab",
@@ -169,7 +169,7 @@
     "avatarColor": "#16a34a",
     "isActive": true,
     "createdAt": "2024-01-09T08:30:00.000Z",
-    "password": "$2a$10$6mh8Qts6KAWhgYlcYztZPeoQLPH1.6MdRBai1q88QKe3Mqbv23d4S"
+    "password": "$2a$10$mz8GDa67MPEelZOxfPxyU.kH2w.acW8JujsFRv50HVRD2x1dnmEY2"
   },
   {
     "id": "usr_staff_lib",
@@ -183,6 +183,6 @@
     "avatarColor": "#ca8a04",
     "isActive": true,
     "createdAt": "2024-01-09T09:15:00.000Z",
-    "password": "$2a$10$6mh8Qts6KAWhgYlcYztZPeoQLPH1.6MdRBai1q88QKe3Mqbv23d4S"
+    "password": "$2a$10$mz8GDa67MPEelZOxfPxyU.kH2w.acW8JujsFRv50HVRD2x1dnmEY2"
   }
 ]
