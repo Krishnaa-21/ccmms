@@ -1,0 +1,10 @@
+export { default as userRepo } from './userRepo.js';
+export { default as categoryRepo } from './categoryRepo.js';
+export { default as complaintRepo } from './complaintRepo.js';
+export { default as statusHistoryRepo } from './statusHistoryRepo.js';
+export { default as notificationRepo } from './notificationRepo.js';
+export { default as feedbackRepo } from './feedbackRepo.js';
+export { default as commentRepo } from './commentRepo.js';
+export { default as settingsRepo } from './settingsRepo.js';
+export { default as auditLogRepo } from './auditLogRepo.js';
+export { default as sentMessageRepo } from './sentMessageRepo.js';

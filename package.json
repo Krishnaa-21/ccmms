@@ -1,0 +1,33 @@
+{
+  "name": "ccmms",
+  "version": "1.0.0",
+  "description": "Campus Complaint & Maintenance Management System (CCMMS) - Phase 1 Foundation",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -n \"SERVER,CLIENT\" -c \"blue,cyan\" \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "seed": "npm --prefix server run seed",
+    "build": "npm --prefix client run build",
+    "start": "npm --prefix server start",
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "keywords": [
+    "campus",
+    "complaint-management",
+    "maintenance",
+    "university",
+    "express",
+    "react",
+    "tailwind"
+  ],
+  "author": "Campus Technology Services",
+  "license": "MIT"
+}

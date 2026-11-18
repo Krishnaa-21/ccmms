@@ -1,0 +1,100 @@
+[
+  {
+    "id": "aud_001",
+    "campusId": "apex-campus-main",
+    "action": "SYSTEM_INITIALIZE",
+    "entityType": "System",
+    "entityId": "ccmms_root",
+    "actor": {
+      "id": "sys_init",
+      "name": "System Installer",
+      "role": "system"
+    },
+    "details": "CCMMS Phase 1 initialized with full campus schema and security profiles.",
+    "timestamp": "2024-01-01T00:00:00.000Z"
+  },
+  {
+    "id": "aud_002",
+    "campusId": "apex-campus-main",
+    "action": "SEED_DEMO_DATA",
+    "entityType": "Database",
+    "entityId": "file_store_collections",
+    "actor": {
+      "id": "usr_admin_01",
+      "name": "Dr. Ramesh Sundaram",
+      "role": "admin"
+    },
+    "details": "Generated 13 users, 4 categories, 40 complaints, and 14 verified ratings.",
+    "timestamp": "2026-11-18T15:13:44.787Z"
+  },
+  {
+    "id": "rec_1795014825591_4t9gy",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T15:13:45.591Z",
+    "action": "COMPLAINT_CREATED",
+    "entityType": "Complaint",
+    "entityId": "rec_1795014825554_3thl6",
+    "actor": {
+      "id": "usr_stud_01",
+      "name": "Aarav Patel",
+      "role": "student"
+    },
+    "details": "Created ticket CCM-2026-0041 (High) in Plumbing"
+  },
+  {
+    "id": "rec_1795014863994_ewvz9",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T15:14:23.995Z",
+    "action": "COMPLAINT_CREATED",
+    "entityType": "Complaint",
+    "entityId": "rec_1795014863963_pajrs",
+    "actor": {
+      "id": "usr_stud_01",
+      "name": "Aarav Patel",
+      "role": "student"
+    },
+    "details": "Created ticket CCM-2026-0042 (Urgent) in Plumbing"
+  },
+  {
+    "id": "rec_1795014864051_7c4wn",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T15:14:24.051Z",
+    "action": "COMPLAINT_STATUS_IN_PROGRESS",
+    "entityType": "Complaint",
+    "entityId": "rec_1795014863963_pajrs",
+    "actor": {
+      "id": "usr_staff_plumb",
+      "name": "Rajesh Sharma",
+      "role": "staff"
+    },
+    "details": "Status changed from Assigned to In Progress by Rajesh Sharma (staff)"
+  },
+  {
+    "id": "rec_1795014864090_3nypt",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T15:14:24.090Z",
+    "action": "COMPLAINT_STATUS_RESOLVED",
+    "entityType": "Complaint",
+    "entityId": "rec_1795014863963_pajrs",
+    "actor": {
+      "id": "usr_staff_plumb",
+      "name": "Rajesh Sharma",
+      "role": "staff"
+    },
+    "details": "Status changed from In Progress to Resolved by Rajesh Sharma (staff)"
+  },
+  {
+    "id": "rec_1795014864181_hkklo",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T15:14:24.181Z",
+    "action": "FEEDBACK_SUBMITTED",
+    "entityType": "Feedback",
+    "entityId": "rec_1795014864177_3bktg",
+    "actor": {
+      "id": "usr_stud_01",
+      "name": "Aarav Patel",
+      "role": "student"
+    },
+    "details": "User submitted 5-star feedback for CCM-2026-0042"
+  }
+]

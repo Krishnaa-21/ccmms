@@ -1,0 +1,91 @@
+[
+  {
+    "id": "cat_plumbing",
+    "campusId": "apex-campus-main",
+    "name": "Plumbing",
+    "code": "PLM",
+    "description": "Water supply pipelines, drain blockages, washroom fixtures, flush tanks and taps",
+    "icon": "Droplets",
+    "color": "#0284c7",
+    "subCategories": [
+      "Leakage",
+      "Blocked drain",
+      "No water supply",
+      "Tap/Flush repair"
+    ],
+    "slaHours": {
+      "Urgent": 4,
+      "High": 12,
+      "Medium": 24,
+      "Low": 48
+    },
+    "isActive": true
+  },
+  {
+    "id": "cat_electrical",
+    "campusId": "apex-campus-main",
+    "name": "Electrical",
+    "code": "ELE",
+    "description": "Power distribution, switchboards, ceiling fans, tube lights, UPS systems and short circuits",
+    "icon": "Zap",
+    "color": "#d97706",
+    "subCategories": [
+      "Power outage",
+      "Faulty switch",
+      "Tube light/Fan",
+      "Short circuit"
+    ],
+    "slaHours": {
+      "Urgent": 2,
+      "High": 8,
+      "Medium": 24,
+      "Low": 48
+    },
+    "isActive": true
+  },
+  {
+    "id": "cat_it",
+    "campusId": "apex-campus-main",
+    "name": "IT",
+    "code": "ITS",
+    "description": "Campus Wi-Fi connectivity, classroom AV projectors, lab computers, network switches and printers",
+    "icon": "Wifi",
+    "color": "#7c3aed",
+    "subCategories": [
+      "Wi-Fi",
+      "Projector",
+      "Computer/Lab system",
+      "Printer"
+    ],
+    "slaHours": {
+      "Urgent": 4,
+      "High": 12,
+      "Medium": 24,
+      "Low": 48
+    },
+    "isActive": true
+  },
+  {
+    "id": "cat_general",
+    "campusId": "apex-campus-main",
+    "name": "General",
+    "code": "GEN",
+    "description": "Classroom benches, broken glass, door locks, sanitation, pest control and carpentry work",
+    "icon": "Wrench",
+    "color": "#059669",
+    "subCategories": [
+      "Furniture",
+      "Cleaning",
+      "Doors/Windows",
+      "Pest control",
+      "Other"
+    ],
+    "slaHours": {
+      "Urgent": 6,
+      "High": 24,
+      "Medium": 48,
+      "Low": 72
+    },
+    "isActive": true
+  }
+]

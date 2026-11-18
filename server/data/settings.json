@@ -1,0 +1,26 @@
+[
+  {
+    "id": "set_apex_main",
+    "campusId": "apex-campus-main",
+    "campusName": "Apex Institute of Technology",
+    "campusShortName": "Apex Campus",
+    "campusCode": "AIT-MAIN",
+    "address": "Survey No. 42, Knowledge Park III, Tech Corridor, Bangalore 560100",
+    "contactEmail": "campus.facilities@apex.edu",
+    "emergencyHelpline": "+91 80 2345 6789",
+    "workingHours": "Monday - Saturday: 08:00 AM - 08:00 PM (Emergency 24/7)",
+    "slaThresholdHours": {
+      "Urgent": 4,
+      "High": 12,
+      "Medium": 24,
+      "Low": 48
+    },
+    "autoAssignment": true,
+    "escalationEmail": "dean.infra@apex.edu",
+    "currency": "INR",
+    "maintenanceCategoriesCount": 4,
+    "systemVersion": "1.0.0-phase1",
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2026-11-18T15:13:44.609Z"
+  }
+]
