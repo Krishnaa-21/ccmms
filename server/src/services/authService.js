@@ -124,6 +124,18 @@ export const authService = {
     });
 
     return { message: 'Password changed successfully' };
+  },
+
+  async updateAvailability(userId, isAvailable) {
+    const user = await userRepo.findById(userId);
+    if (!user) {
+      const err = new Error('User not found');
+      err.statusCode = 404;
+      throw err;
+    }
+    const updated = await userRepo.update(userId, { isAvailable: Boolean(isAvailable) });
+    const { password, ...safeUser } = updated;
+    return safeUser;
   }
 };
 

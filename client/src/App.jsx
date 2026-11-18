@@ -7,8 +7,10 @@ import { ThemeProvider } from './context/ThemeContext.jsx';
 import { AuthProvider, useAuth } from './context/AuthContext.jsx';
 import { NotificationProvider } from './context/NotificationContext.jsx';
 
-import { ProtectedRoute } from './components/common/ProtectedRoute.jsx';
+import { ProtectedRoute, RoleRoute } from './components/common/ProtectedRoute.jsx';
 import StudentLayout from './components/layout/StudentLayout.jsx';
+import AdminLayout from './components/layout/AdminLayout.jsx';
+import StaffLayout from './components/layout/StaffLayout.jsx';
 
 // Public Pages
 import LandingPage from './pages/public/LandingPage.jsx';
@@ -24,6 +26,21 @@ import ComplaintDetailPage from './pages/student/ComplaintDetailPage.jsx';
 import NotificationsPage from './pages/student/NotificationsPage.jsx';
 import ProfilePage from './pages/student/ProfilePage.jsx';
 import SettingsPage from './pages/student/SettingsPage.jsx';
+
+// Admin Pages
+import AdminDashboard from './pages/admin/AdminDashboard.jsx';
+import ManageComplaintsPage from './pages/admin/ManageComplaintsPage.jsx';
+import ReviewQueuePage from './pages/admin/ReviewQueuePage.jsx';
+import StaffWorkloadPage from './pages/admin/StaffWorkloadPage.jsx';
+import ManageUsersPage from './pages/admin/ManageUsersPage.jsx';
+import ReportsPage from './pages/admin/ReportsPage.jsx';
+import AdminSettingsPage from './pages/admin/SettingsPage.jsx';
+
+// Staff Pages
+import StaffDashboard from './pages/staff/StaffDashboard.jsx';
+import StaffTasksPage from './pages/staff/StaffTasksPage.jsx';
+import StaffSchedulePage from './pages/staff/StaffSchedulePage.jsx';
+import StaffPerformancePage from './pages/staff/StaffPerformancePage.jsx';
 
 import { Button } from './components/ui/Button.jsx';
 import { Building2, ArrowLeft } from 'lucide-react';
@@ -64,13 +81,13 @@ function NotFoundPage() {
   );
 }
 
-// Redirect logged-in users who land on public root or login
+// Redirect logged-in users who land on public root or login to their role home
 function PublicRoute({ children }) {
   const { isAuthenticated, user, isLoading } = useAuth();
   if (isLoading) return null;
   if (isAuthenticated && user) {
-    if (user.role === 'admin') return <Navigate to="/student/dashboard" replace />;
-    if (user.role === 'staff') return <Navigate to="/student/dashboard" replace />;
+    if (user.role === 'admin') return <Navigate to="/admin/dashboard" replace />;
+    if (user.role === 'staff') return <Navigate to="/staff/dashboard" replace />;
     return <Navigate to="/student/dashboard" replace />;
   }
   return children;
@@ -84,7 +101,7 @@ export default function App() {
           <NotificationProvider>
             <BrowserRouter>
               <Routes>
-                {/* Public Website */}
+                {/* 1. Public Website */}
                 <Route path="/" element={<LandingPage />} />
                 <Route
                   path="/login"
@@ -104,7 +121,7 @@ export default function App() {
                 />
                 <Route path="/forgot-password" element={<ForgotPasswordPage />} />
 
-                {/* Student / Requester Portal */}
+                {/* 2. Student / Requester Portal */}
                 <Route
                   path="/student"
                   element={
@@ -123,17 +140,42 @@ export default function App() {
                   <Route path="settings" element={<SettingsPage />} />
                 </Route>
 
-                {/* Compatibility Fallback for /admin and /staff until Phase 4 & 5 */}
+                {/* 3. Administrator Experience */}
                 <Route
-                  path="/admin/*"
-                  element={<Navigate to="/student/dashboard" replace />}
-                />
-                <Route
-                  path="/staff/*"
-                  element={<Navigate to="/student/dashboard" replace />}
-                />
+                  path="/admin"
+                  element={
+                    <RoleRoute allowedRoles={['admin']}>
+                      <AdminLayout />
+                    </RoleRoute>
+                  }
+                >
+                  <Route index element={<Navigate to="/admin/dashboard" replace />} />
+                  <Route path="dashboard" element={<AdminDashboard />} />
+                  <Route path="complaints" element={<ManageComplaintsPage />} />
+                  <Route path="review-queue" element={<ReviewQueuePage />} />
+                  <Route path="workload" element={<StaffWorkloadPage />} />
+                  <Route path="users" element={<ManageUsersPage />} />
+                  <Route path="reports" element={<ReportsPage />} />
+                  <Route path="settings" element={<AdminSettingsPage />} />
+                </Route>
 
-                {/* 404 Catch-All */}
+                {/* 4. Maintenance Staff Experience */}
+                <Route
+                  path="/staff"
+                  element={
+                    <RoleRoute allowedRoles={['staff']}>
+                      <StaffLayout />
+                    </RoleRoute>
+                  }
+                >
+                  <Route index element={<Navigate to="/staff/dashboard" replace />} />
+                  <Route path="dashboard" element={<StaffDashboard />} />
+                  <Route path="tasks" element={<StaffTasksPage />} />
+                  <Route path="schedule" element={<StaffSchedulePage />} />
+                  <Route path="performance" element={<StaffPerformancePage />} />
+                </Route>
+
+                {/* 5. 404 Catch-All */}
                 <Route path="*" element={<NotFoundPage />} />
               </Routes>
             </BrowserRouter>

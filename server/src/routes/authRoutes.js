@@ -5,7 +5,8 @@ import {
   logout,
   getMe,
   changePassword,
-  refreshToken
+  refreshToken,
+  updateAvailability
 } from '../controllers/authController.js';
 import { requireAuth } from '../middleware/auth.js';
 import { validateBody } from '../middleware/validate.js';
@@ -25,6 +26,7 @@ router.post('/refresh', refreshToken);
 
 router.get('/me', requireAuth, getMe);
 router.patch('/change-password', requireAuth, validateBody(changePasswordSchema), changePassword);
+router.patch('/me/availability', requireAuth, updateAvailability);
 
 export default router;
 

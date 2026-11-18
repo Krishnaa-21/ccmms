@@ -4,13 +4,23 @@ export const createComplaintSchema = z.object({
   title: z.string().trim().min(5, 'Title must be at least 5 characters').max(150),
   description: z.string().trim().min(10, 'Description must be at least 10 characters'),
   categoryId: z.string().min(1, 'Category is required'),
-  subCategory: z.string().min(1, 'Subcategory is required'),
+  subCategory: z.string().optional(),
+  subcategory: z.string().optional(),
   building: z.string().min(1, 'Building is required'),
   floor: z.string().min(1, 'Floor is required'),
   room: z.string().min(1, 'Room is required'),
   landmark: z.string().trim().optional(),
   priority: z.enum(['Urgent', 'High', 'Medium', 'Low']).optional(),
-  contactPreference: z.enum(['Phone', 'Email', 'In-Person']).optional().default('Phone')
+  contactPreference: z.enum(['Phone', 'Email', 'In-Person']).optional().default('Phone'),
+  preferredContactTime: z.string().optional(),
+  contactPhone: z.string().optional()
+}).transform((data) => {
+  const sub = data.subCategory || data.subcategory || 'General';
+  return {
+    ...data,
+    subCategory: sub,
+    subcategory: sub
+  };
 });
 
 export const updateComplaintSchema = z.object({
@@ -18,6 +28,7 @@ export const updateComplaintSchema = z.object({
   description: z.string().trim().min(10).optional(),
   categoryId: z.string().optional(),
   subCategory: z.string().optional(),
+  subcategory: z.string().optional(),
   building: z.string().optional(),
   floor: z.string().optional(),
   room: z.string().optional(),

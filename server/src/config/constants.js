@@ -33,7 +33,8 @@ export const DEFAULT_SLA_HOURS = {
 export const STATUS_TRANSITIONS = {
   student: {
     Submitted: ['Rejected'], // Cancel own complaint
-    Resolved: ['Reopened']   // Reopen resolved complaint with reason
+    Resolved: ['Reopened'],  // Reopen resolved complaint with reason
+    Closed: ['Reopened']     // Reopen closed complaint if issue recurred
   },
   staff: {
     Assigned: ['In Progress'],

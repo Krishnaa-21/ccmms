@@ -84,12 +84,24 @@ export const refreshToken = asyncHandler(async (req, res) => {
   });
 });
 
+export const updateAvailability = asyncHandler(async (req, res) => {
+  const { isAvailable } = req.body;
+  const user = await authService.updateAvailability(req.user.id, isAvailable);
+
+  res.json({
+    success: true,
+    data: user,
+    message: `Availability updated to ${isAvailable ? 'Available' : 'Unavailable'}`
+  });
+});
+
 export default {
   register,
   login,
   logout,
   getMe,
   changePassword,
-  refreshToken
+  refreshToken,
+  updateAvailability
 };
 

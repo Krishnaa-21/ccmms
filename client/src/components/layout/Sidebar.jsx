@@ -12,21 +12,68 @@ import {
   LogOut,
   ShieldCheck,
   ChevronLeft,
-  ChevronRight
+  ChevronRight,
+  Sparkles,
+  Users,
+  UserCheck,
+  BarChart3,
+  Wrench,
+  Calendar,
+  Award
 } from 'lucide-react';
 
 export function Sidebar({ isCollapsed, setIsCollapsed, isMobileOpen, setIsMobileOpen }) {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
 
-  const navItems = [
-    { label: 'Dashboard', path: '/student/dashboard', icon: LayoutDashboard },
-    { label: 'My Complaints', path: '/student/complaints', icon: ClipboardList },
-    { label: 'Report an Issue', path: '/student/new-complaint', icon: PlusCircle, highlight: true },
-    { label: 'Notifications', path: '/student/notifications', icon: Bell },
-    { label: 'My Profile', path: '/student/profile', icon: User },
-    { label: 'Settings', path: '/student/settings', icon: Settings }
-  ];
+  const role = user?.role || 'student';
+
+  const getNavItems = () => {
+    if (role === 'admin') {
+      return [
+        { label: 'Overview', path: '/admin/dashboard', icon: LayoutDashboard },
+        { label: 'Complaints', path: '/admin/complaints', icon: ClipboardList },
+        { label: 'Review Queue', path: '/admin/review-queue', icon: Sparkles, highlight: true },
+        { label: 'Staff Workload', path: '/admin/workload', icon: Users },
+        { label: 'Manage Users', path: '/admin/users', icon: UserCheck },
+        { label: 'Reports & Export', path: '/admin/reports', icon: BarChart3 },
+        { label: 'Campus Settings', path: '/admin/settings', icon: Settings }
+      ];
+    }
+
+    if (role === 'staff') {
+      return [
+        { label: 'Today\'s Queue', path: '/staff/dashboard', icon: LayoutDashboard },
+        { label: 'My Work Orders', path: '/staff/tasks', icon: Wrench, highlight: true },
+        { label: 'Due Schedule', path: '/staff/schedule', icon: Calendar },
+        { label: 'My Scorecard', path: '/staff/performance', icon: Award }
+      ];
+    }
+
+    // Default: student / requester
+    return [
+      { label: 'Dashboard', path: '/student/dashboard', icon: LayoutDashboard },
+      { label: 'My Complaints', path: '/student/complaints', icon: ClipboardList },
+      { label: 'Report an Issue', path: '/student/new-complaint', icon: PlusCircle, highlight: true },
+      { label: 'Notifications', path: '/student/notifications', icon: Bell },
+      { label: 'My Profile', path: '/student/profile', icon: User },
+      { label: 'Settings', path: '/student/settings', icon: Settings }
+    ];
+  };
+
+  const navItems = getNavItems();
+
+  const getPortalLabel = () => {
+    if (role === 'admin') return 'Administration';
+    if (role === 'staff') return 'Maintenance Desk';
+    return 'Student Portal';
+  };
+
+  const getHomeRoute = () => {
+    if (role === 'admin') return '/admin/dashboard';
+    if (role === 'staff') return '/staff/dashboard';
+    return '/student/dashboard';
+  };
 
   const handleLogout = async () => {
     await logout();
@@ -55,7 +102,7 @@ export function Sidebar({ isCollapsed, setIsCollapsed, isMobileOpen, setIsMobile
         <div>
           <div className="h-16 flex items-center justify-between px-4 border-b border-surface-border">
             <NavLink
-              to="/student/dashboard"
+              to={getHomeRoute()}
               className="flex items-center gap-3 overflow-hidden"
               onClick={() => setIsMobileOpen(false)}
             >
@@ -65,10 +112,10 @@ export function Sidebar({ isCollapsed, setIsCollapsed, isMobileOpen, setIsMobile
               {!isCollapsed && (
                 <div className="truncate">
                   <span className="font-heading font-extrabold text-base text-slate-900 dark:text-white">
-                    CCMMS
+                    Apex CCMMS
                   </span>
                   <span className="block text-[10px] text-slate-400 uppercase font-semibold">
-                    Student Portal
+                    {getPortalLabel()}
                   </span>
                 </div>
               )}
@@ -127,12 +174,13 @@ export function Sidebar({ isCollapsed, setIsCollapsed, isMobileOpen, setIsMobile
               >
                 {user?.name?.charAt(0) || 'U'}
               </div>
-              <div className="truncate">
+              <div className="truncate flex-1">
                 <span className="block text-xs font-bold text-slate-800 dark:text-slate-100 truncate">
                   {user?.name}
                 </span>
-                <span className="block text-[11px] text-slate-400 truncate">
-                  {user?.email}
+                <span className="block text-[10px] text-primary-700 dark:text-primary-400 uppercase font-bold tracking-wider">
+                  {role}
+                  {user?.specialty ? ` • ${user.specialty}` : ''}
                 </span>
               </div>
             </div>
