@@ -26,5 +26,285 @@
     },
     "details": "Generated 13 users, 4 categories, 40 complaints, and 14 verified ratings.",
     "timestamp": "2026-11-18T17:46:05.806Z"
+  },
+  {
+    "id": "rec_1795024185337_3psc2",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:49:45.337Z",
+    "action": "COMPLAINT_CREATED",
+    "entityType": "Complaint",
+    "entityId": "rec_1795024185331_3nqgb",
+    "actor": {
+      "id": "usr_stud_01",
+      "name": "Aarav Patel",
+      "role": "student"
+    },
+    "details": "Created ticket CCM-2026-0041 (High) in Plumbing"
+  },
+  {
+    "id": "rec_1795024243084_uavee",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:50:43.084Z",
+    "action": "PREVENTIVE_PLAN_EXECUTED",
+    "entityType": "PreventivePlan",
+    "entityId": "prv_001",
+    "actor": {
+      "id": "usr_admin_01",
+      "name": "Dr. Ramesh Sundaram",
+      "role": "admin"
+    },
+    "details": "Dispatched work order #CCM-2026-0042 for plan \"Monthly Overhead Water Tank Sanitization & Chlorination\". Next scheduled run: 12/18/2026."
+  },
+  {
+    "id": "rec_1795024315342_znk2i",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:51:55.342Z",
+    "action": "COMPLAINT_STATUS_IN_PROGRESS",
+    "entityType": "Complaint",
+    "entityId": "rec_1795024185331_3nqgb",
+    "actor": {
+      "id": "usr_staff_plumb",
+      "name": "Rajesh Sharma",
+      "role": "staff"
+    },
+    "details": "Status changed from Assigned to In Progress by Rajesh Sharma (staff)"
+  },
+  {
+    "id": "rec_1795024800023_84ham",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T18:00:00.023Z",
+    "action": "SLA_ESCALATION_LEVEL_2",
+    "entityType": "Complaint",
+    "entityId": "cmp_001",
+    "actor": {
+      "id": "cron_sla_engine",
+      "name": "SLA Monitor Cron",
+      "role": "system"
+    },
+    "details": "Escalated to Level 2 (50%+ breach). Priority auto-bumped to Urgent. Total breach duration: 92.2 hours."
+  },
+  {
+    "id": "rec_1795024800032_3vklm",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T18:00:00.032Z",
+    "action": "SLA_ESCALATION_LEVEL_2",
+    "entityType": "Complaint",
+    "entityId": "cmp_002",
+    "actor": {
+      "id": "cron_sla_engine",
+      "name": "SLA Monitor Cron",
+      "role": "system"
+    },
+    "details": "Escalated to Level 2 (50%+ breach). Priority auto-bumped to Urgent. Total breach duration: 60.2 hours."
+  },
+  {
+    "id": "rec_1795024800038_ohqnw",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T18:00:00.038Z",
+    "action": "SLA_ESCALATION_LEVEL_2",
+    "entityType": "Complaint",
+    "entityId": "cmp_003",
+    "actor": {
+      "id": "cron_sla_engine",
+      "name": "SLA Monitor Cron",
+      "role": "system"
+    },
+    "details": "Escalated to Level 2 (50%+ breach). Priority auto-bumped to Urgent. Total breach duration: 44.2 hours."
+  },
+  {
+    "id": "rec_1795024800044_lru3e",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T18:00:00.044Z",
+    "action": "SLA_ESCALATION_LEVEL_2",
+    "entityType": "Complaint",
+    "entityId": "cmp_004",
+    "actor": {
+      "id": "cron_sla_engine",
+      "name": "SLA Monitor Cron",
+      "role": "system"
+    },
+    "details": "Escalated to Level 2 (50%+ breach). Priority auto-bumped to Urgent. Total breach duration: 46.2 hours."
+  },
+  {
+    "id": "rec_1795024800050_7sxzn",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T18:00:00.050Z",
+    "action": "SLA_ESCALATION_LEVEL_2",
+    "entityType": "Complaint",
+    "entityId": "cmp_005",
+    "actor": {
+      "id": "cron_sla_engine",
+      "name": "SLA Monitor Cron",
+      "role": "system"
+    },
+    "details": "Escalated to Level 2 (50%+ breach). Priority auto-bumped to Urgent. Total breach duration: 120.2 hours."
+  },
+  {
+    "id": "rec_1795024800058_cxuvw",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T18:00:00.058Z",
+    "action": "SLA_ESCALATION_LEVEL_2",
+    "entityType": "Complaint",
+    "entityId": "cmp_006",
+    "actor": {
+      "id": "cron_sla_engine",
+      "name": "SLA Monitor Cron",
+      "role": "system"
+    },
+    "details": "Escalated to Level 2 (50%+ breach). Priority auto-bumped to Urgent. Total breach duration: 70.2 hours."
+  },
+  {
+    "id": "rec_1795024800065_lb0us",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T18:00:00.066Z",
+    "action": "SLA_ESCALATION_LEVEL_2",
+    "entityType": "Complaint",
+    "entityId": "cmp_007",
+    "actor": {
+      "id": "cron_sla_engine",
+      "name": "SLA Monitor Cron",
+      "role": "system"
+    },
+    "details": "Escalated to Level 2 (50%+ breach). Priority auto-bumped to Urgent. Total breach duration: 144.2 hours."
+  },
+  {
+    "id": "rec_1795024800076_hf70m",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T18:00:00.076Z",
+    "action": "SLA_ESCALATION_LEVEL_1",
+    "entityType": "Complaint",
+    "entityId": "cmp_014",
+    "actor": {
+      "id": "cron_sla_engine",
+      "name": "SLA Monitor Cron",
+      "role": "system"
+    },
+    "details": "Escalated to Level 1 (25%+ breach). Priority adjusted to High. Total breach duration: 9.2 hours."
+  },
+  {
+    "id": "rec_1795024800083_nwy76",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T18:00:00.083Z",
+    "action": "SLA_ESCALATION_LEVEL_2",
+    "entityType": "Complaint",
+    "entityId": "cmp_016",
+    "actor": {
+      "id": "cron_sla_engine",
+      "name": "SLA Monitor Cron",
+      "role": "system"
+    },
+    "details": "Escalated to Level 2 (50%+ breach). Priority auto-bumped to Urgent. Total breach duration: 1.2 hours."
+  },
+  {
+    "id": "rec_1795024800092_9z3nz",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T18:00:00.092Z",
+    "action": "SLA_ESCALATION_LEVEL_1",
+    "entityType": "Complaint",
+    "entityId": "cmp_017",
+    "actor": {
+      "id": "cron_sla_engine",
+      "name": "SLA Monitor Cron",
+      "role": "system"
+    },
+    "details": "Escalated to Level 1 (25%+ breach). Priority adjusted to High. Total breach duration: 6.2 hours."
+  },
+  {
+    "id": "rec_1795024800101_cnulr",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T18:00:00.101Z",
+    "action": "SLA_ESCALATION_LEVEL_1",
+    "entityType": "Complaint",
+    "entityId": "cmp_018",
+    "actor": {
+      "id": "cron_sla_engine",
+      "name": "SLA Monitor Cron",
+      "role": "system"
+    },
+    "details": "Escalated to Level 1 (25%+ breach). Priority adjusted to High. Total breach duration: 8.2 hours."
+  },
+  {
+    "id": "rec_1795024800108_3wnne",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T18:00:00.108Z",
+    "action": "SLA_ESCALATION_LEVEL_2",
+    "entityType": "Complaint",
+    "entityId": "cmp_019",
+    "actor": {
+      "id": "cron_sla_engine",
+      "name": "SLA Monitor Cron",
+      "role": "system"
+    },
+    "details": "Escalated to Level 2 (50%+ breach). Priority auto-bumped to Urgent. Total breach duration: 22.2 hours."
+  },
+  {
+    "id": "rec_1795024800115_eh0zv",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T18:00:00.115Z",
+    "action": "SLA_ESCALATION_LEVEL_2",
+    "entityType": "Complaint",
+    "entityId": "cmp_020",
+    "actor": {
+      "id": "cron_sla_engine",
+      "name": "SLA Monitor Cron",
+      "role": "system"
+    },
+    "details": "Escalated to Level 2 (50%+ breach). Priority auto-bumped to Urgent. Total breach duration: 23.2 hours."
+  },
+  {
+    "id": "rec_1795024800120_dtxp7",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T18:00:00.120Z",
+    "action": "SLA_ESCALATION_LEVEL_2",
+    "entityType": "Complaint",
+    "entityId": "cmp_021",
+    "actor": {
+      "id": "cron_sla_engine",
+      "name": "SLA Monitor Cron",
+      "role": "system"
+    },
+    "details": "Escalated to Level 2 (50%+ breach). Priority auto-bumped to Urgent. Total breach duration: 28.2 hours."
+  },
+  {
+    "id": "rec_1795024800125_hwmlp",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T18:00:00.125Z",
+    "action": "SLA_ESCALATION_LEVEL_2",
+    "entityType": "Complaint",
+    "entityId": "cmp_022",
+    "actor": {
+      "id": "cron_sla_engine",
+      "name": "SLA Monitor Cron",
+      "role": "system"
+    },
+    "details": "Escalated to Level 2 (50%+ breach). Priority auto-bumped to Urgent. Total breach duration: 12.2 hours."
+  },
+  {
+    "id": "rec_1795067875199_qdr99",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-19T05:57:55.199Z",
+    "action": "COMPLAINT_CREATED",
+    "entityType": "Complaint",
+    "entityId": "rec_1795067875153_ylf4g",
+    "actor": {
+      "id": "usr_stud_01",
+      "name": "Aarav Patel",
+      "role": "student"
+    },
+    "details": "Created ticket CCM-2026-0043 (Medium) in Electrical"
+  },
+  {
+    "id": "rec_1795072813587_b57qr",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-19T07:20:13.587Z",
+    "action": "COMPLAINT_CREATED",
+    "entityType": "Complaint",
+    "entityId": "rec_1795072813567_8dxm2",
+    "actor": {
+      "id": "usr_stud_01",
+      "name": "Aarav Patel",
+      "role": "student"
+    },
+    "details": "Created ticket CCM-2026-0044 (High) in Plumbing"
   }
 ]

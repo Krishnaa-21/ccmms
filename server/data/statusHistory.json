@@ -2112,5 +2112,124 @@
     },
     "changedAt": "2026-10-20T17:46:05.805Z",
     "notes": "Campus IT services exclusively support institute-owned hardware and infrastructure. Personal electronics repairs are not covered under campus maintenance policy."
+  },
+  {
+    "id": "rec_1795024185333_s7h0i",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:49:45.333Z",
+    "complaintId": "rec_1795024185331_3nqgb",
+    "trackingNumber": "CMP-2026-041",
+    "referenceNumber": "CCM-2026-0041",
+    "fromStatus": null,
+    "status": "Submitted",
+    "changedBy": {
+      "id": "usr_stud_01",
+      "name": "Aarav Patel",
+      "role": "student"
+    },
+    "notes": "Complaint submitted by requester via Campus Portal",
+    "changedAt": "2026-11-18T17:49:45.330Z"
+  },
+  {
+    "id": "rec_1795024185334_fibo3",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:49:45.334Z",
+    "complaintId": "rec_1795024185331_3nqgb",
+    "trackingNumber": "CMP-2026-041",
+    "referenceNumber": "CCM-2026-0041",
+    "fromStatus": "Submitted",
+    "status": "Assigned",
+    "changedBy": {
+      "id": "system_auto_assign",
+      "name": "Smart Workflow Engine",
+      "role": "system"
+    },
+    "notes": "Smart Auto-Assignment assigned to Rajesh Sharma (Plumbing) based on lowest weighted workload",
+    "changedAt": "2026-11-18T17:49:45.433Z"
+  },
+  {
+    "id": "rec_1795024315340_256sz",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-18T17:51:55.340Z",
+    "complaintId": "rec_1795024185331_3nqgb",
+    "trackingNumber": "CMP-2026-041",
+    "referenceNumber": "CCM-2026-0041",
+    "fromStatus": "Assigned",
+    "status": "In Progress",
+    "changedBy": {
+      "id": "usr_staff_plumb",
+      "name": "Rajesh Sharma",
+      "role": "staff"
+    },
+    "notes": "Technician accepted work order and commenced on-site service",
+    "changedAt": "2026-11-18T17:51:55.338Z"
+  },
+  {
+    "id": "rec_1795067875166_jzifk",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-19T05:57:55.166Z",
+    "complaintId": "rec_1795067875153_ylf4g",
+    "trackingNumber": "CMP-2026-043",
+    "referenceNumber": "CCM-2026-0043",
+    "fromStatus": null,
+    "status": "Submitted",
+    "changedBy": {
+      "id": "usr_stud_01",
+      "name": "Aarav Patel",
+      "role": "student"
+    },
+    "notes": "Complaint submitted by requester via Campus Portal",
+    "changedAt": "2026-11-19T05:57:55.149Z"
+  },
+  {
+    "id": "rec_1795067875174_gjems",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-19T05:57:55.174Z",
+    "complaintId": "rec_1795067875153_ylf4g",
+    "trackingNumber": "CMP-2026-043",
+    "referenceNumber": "CCM-2026-0043",
+    "fromStatus": "Submitted",
+    "status": "Assigned",
+    "changedBy": {
+      "id": "system_auto_assign",
+      "name": "Smart Workflow Engine",
+      "role": "system"
+    },
+    "notes": "Smart Auto-Assignment assigned to Suresh Kumar (Electrical) based on lowest weighted workload",
+    "changedAt": "2026-11-19T05:57:55.272Z"
+  },
+  {
+    "id": "rec_1795072813573_t9b6h",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-19T07:20:13.574Z",
+    "complaintId": "rec_1795072813567_8dxm2",
+    "trackingNumber": "CMP-2026-044",
+    "referenceNumber": "CCM-2026-0044",
+    "fromStatus": null,
+    "status": "Submitted",
+    "changedBy": {
+      "id": "usr_stud_01",
+      "name": "Aarav Patel",
+      "role": "student"
+    },
+    "notes": "Complaint submitted by requester via Campus Portal",
+    "changedAt": "2026-11-19T07:20:13.564Z"
+  },
+  {
+    "id": "rec_1795072813578_zgh3u",
+    "campusId": "apex-campus-main",
+    "createdAt": "2026-11-19T07:20:13.578Z",
+    "complaintId": "rec_1795072813567_8dxm2",
+    "trackingNumber": "CMP-2026-044",
+    "referenceNumber": "CCM-2026-0044",
+    "fromStatus": "Submitted",
+    "status": "Assigned",
+    "changedBy": {
+      "id": "system_auto_assign",
+      "name": "Smart Workflow Engine",
+      "role": "system"
+    },
+    "notes": "Smart Auto-Assignment assigned to Rajesh Sharma (Plumbing) based on lowest weighted workload",
+    "changedAt": "2026-11-19T07:20:13.677Z"
   }
 ]
