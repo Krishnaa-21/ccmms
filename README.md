@@ -1,11 +1,25 @@
 <!-- ===================== ANIMATED HEADER ===================== -->
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,18,24&height=240&section=header&text=CCMMS&fontSize=84&fontColor=ffffff&fontAlignY=36&animation=twinkling&desc=Campus%20Complaint%20%26%20Maintenance%20Management%20System&descSize=22&descAlignY=58" width="100%" alt="CCMMS Header" />
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12,14,18,24&height=240&section=header&text=CCMMS&fontSize=84&fontColor=ffffff&fontAlignY=36&animation=twinkling&desc=Campus%20Complaint%20and%20Maintenance%20Management%20System&descSize=22&descAlignY=58" width="100%" alt="CCMMS Header" />
 
 <a href="https://git.io/typing-svg">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=3200&pause=900&color=1E3A8A&center=true&vCenter=true&width=820&height=50&lines=Centralized+Facilities+Operations+Platform;Automated+Triage+%7C+SLA+Escalation+Daemons;QR+Code+Physical+Asset+Tagging;Zero-External-Database+ACID+JSON+File-Store;Phase+5+Complete+%E2%80%94+Final+Delivery" alt="Typing SVG" />
 </a>
+
+<p align="center">
+  <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f3eb/512.gif" width="40" />
+  <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6a8/512.gif" width="40" />
+  <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f514/512.gif" width="40" />
+  <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f6e0_fe0f/512.gif" width="40" />
+  <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/2699_fe0f/512.gif" width="40" />
+  <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f4f1/512.gif" width="40" />
+  <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f4ca/512.gif" width="40" />
+  <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/23f0/512.gif" width="40" />
+  <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/2705/512.gif" width="40" />
+  <img src="https://fonts.gstatic.com/s/e/notoemoji/latest/1f680/512.gif" width="40" />
+</p>
+
 
 <br/>
 
